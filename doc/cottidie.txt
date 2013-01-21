@@ -1,0 +1,54 @@
+*cottidie.txt*	Your quotidian Vim tip in 78 characters
+
+Author: glts <676c7473@gmail.com>
+License: Same terms as Vim itself (see |license|)
+
+DESCRIPTION					*cottidie*
+
+Cottidie brings you Vim tips in as unobtrusive a way as possible.  At 78
+characters, these have enough substance to inspire but not enough to distract.
+
+						*:CottidieTip*
+:CottidieTip[!]		Shows a tip in the messages area.  With the [!] the
+			tip is also put in the |:messages| history but the
+			output is less colourful.
+
+It may be tempting to set this up to fire on the |VimEnter| event: >
+
+    :autocmd VimEnter * CottidieTip
+
+Unfortunately, Vim's handling of |:echo| messages in autocommands is buggy, so
+this may or may not work depending on what kind of Vim you are using.
+
+Tips are taken from or inspired by various sources including Drew Neil's
+"Practical Vim" and Vimcasts, the Vim Quick Reference Card, the Vim tips wiki,
+Stackoverflow, as well as from my own notes.
+
+SETTINGS					*cottidie-settings*
+
+This plugin works out of the box, but the location of tips files can be
+changed.
+						*g:cottidie_default_tips*
+    g:cottidie_default_tips ~
+    Path to default tips file.
+
+    You can provide your own tips file.  Any path Vim can |:read| is allowed,
+    including remote paths.  An up-to-date tips file is hosted at
+    http://glts.github.com/vim-cottidie/tips.
+
+    The default tips file must contain the magic string "cottidie" or "tips"
+    in the first three non-blank lines.  For the syntax see the included file.
+    Set this variable to the empty string to disable the default tips file.
+
+						*g:cottidie_extra_tips*
+    g:cottidie_extra_tips ~
+    List of paths to additional user-supplied tips files.
+
+    Again, remote paths are possible.  Example: >
+
+	let g:cottidie_extra_tips =
+	    \ ['~/mytips.txt', 'ftp://ftp.me.com/cottidie/tips']
+<
+    No validation takes place, file content is used as is.
+
+ vim:tw=78:ts=8:ft=help:norl:
