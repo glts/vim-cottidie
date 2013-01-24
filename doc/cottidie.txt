@@ -20,10 +20,6 @@ It may be tempting to set this up to fire on the |VimEnter| event: >
 Unfortunately, Vim's handling of |:echo| messages in autocommands is buggy, so
 this may or may not work depending on what kind of Vim you are using.
 
-Tips are taken from or inspired by various sources including Drew Neil's
-"Practical Vim" and Vimcasts, the Vim Quick Reference Card, the Vim tips wiki,
-Stackoverflow, as well as from my own notes.
-
 SETTINGS					*cottidie-settings*
 
 This plugin works out of the box, but the location of tips files can be
@@ -33,8 +29,7 @@ changed.
     Path to default tips file.
 
     You can provide your own tips file.  Any path Vim can |:read| is allowed,
-    including remote paths.  An up-to-date tips file is hosted at
-    http://glts.github.com/vim-cottidie/tips.
+    including remote paths like "http://glts.github.com/vim-cottidie/tips".
 
     The default tips file must contain the magic string "cottidie" or "tips"
     in the first three non-blank lines.  For the syntax see the included file.
@@ -42,9 +37,7 @@ changed.
 
 						*g:cottidie_extra_tips*
     g:cottidie_extra_tips ~
-    List of paths to additional user-supplied tips files.
-
-    Again, remote paths are possible.  Example: >
+    List of paths to additional user-supplied tips files.  Example: >
 
 	let g:cottidie_extra_tips =
 	    \ ['~/mytips.txt', 'ftp://ftp.me.com/cottidie/tips']
