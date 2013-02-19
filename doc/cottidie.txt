@@ -8,6 +8,9 @@ DESCRIPTION					*cottidie*
 Cottidie brings you Vim tips in as unobtrusive a way as possible.  At 78
 characters, these have enough substance to inspire but not enough to distract.
 
+The location of the tips file is configurable, so this plugin may also serve
+as a "daily tip" engine which draws from your own notes.
+
 						*:CottidieTip*
 :CottidieTip[!]		Shows a tip in the messages area.  With the [!] the
 			tip is also put in the |:messages| history but the
@@ -22,18 +25,19 @@ this may or may not work depending on what kind of Vim you are using.
 
 SETTINGS					*cottidie-settings*
 
-This plugin works out of the box, but the location of tips files can be
-changed.
+This plugin works out of the box as it comes packaged with a nice stockpile of
+tips.  The tips source can be adjusted with the following options.
+
 						*g:cottidie_default_tips*
     g:cottidie_default_tips ~
     Path to default tips file.
 
     You can provide your own tips file.  Any path Vim can |:read| is allowed,
-    including remote paths like "http://glts.github.com/vim-cottidie/tips".
+    including remote paths like http://glts.github.com/vim-cottidie/tips.
 
     The default tips file must contain the magic string "cottidie" or "tips"
     in the first three non-blank lines.  For the syntax see the included file.
-    Set this variable to the empty string to disable the default tips file.
+    Leave this variable empty to disable the default tips file.
 
 						*g:cottidie_extra_tips*
     g:cottidie_extra_tips ~
