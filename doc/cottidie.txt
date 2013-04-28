@@ -9,7 +9,8 @@ Cottidie brings you Vim tips in as unobtrusive a way as possible.  At 78
 characters, these have enough substance to inspire but not enough to distract.
 
 The location of the tips file is configurable, so this plugin may also serve
-as a "daily tip" engine which draws from your own notes.
+you as a "daily tip" engine which draws from your own notes. (Not actually
+daily though, it doesn't include any timing mechanism.)
 
 						*:CottidieTip*
 :CottidieTip[!]		Shows a tip in the messages area.  With the [!] the
@@ -33,7 +34,7 @@ tips.  The tips source can be adjusted with the following options.
     Path to default tips file.
 
     You can provide your own tips file.  Any path Vim can |:read| is allowed,
-    including remote paths like http://glts.github.com/vim-cottidie/tips.
+    including remote paths like http://glts.github.io/vim-cottidie/tips.
 
     The default tips file must contain the magic string "cottidie" or "tips"
     in the first three non-blank lines.  For the syntax see the included file.
