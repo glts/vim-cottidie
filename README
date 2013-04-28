@@ -3,4 +3,25 @@ cottidie.vim
 
 Your quotidian Vim tip in 78 characters.
 
-NOTE The master branch is currently the *development* branch!
+This Vim plugin brings short, syntax-highlighted Vim tips to your messages
+area. Try it:
+
+:CottidieTip
+
+The included tips are written in a style that I hope to be friendly and
+motivating. The target audience is intermediate level.
+
+The location of the tips file is configurable, so this plugin may also serve
+you as a "daily tip" engine which draws from your own notes. (Not actually
+daily though, it doesn't include any timing mechanism.)
+
+Installation
+------------
+
+Move the files into their respective directories inside your ~/.vim directory
+(or your $HOME\vimfiles directory if you're on Windows).
+
+With the Pathogen plugin manager the installation is as simple as:
+
+cd ~/.vim/bundle
+git clone git://github.com/glts/vim-cottidie.git cottidie
