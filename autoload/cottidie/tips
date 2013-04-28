@@ -49,6 +49,7 @@ Editing	Vim can justify text. But only after it's enabled: :runtime macros/justi
 Editing	cip<Esc> collapses blank line under cursor and adjacent blank lines into one.
 Editing	viw on whitespace selects it and all adjacent whitespace!
 Editing	How would you yank the whole buffer into the clipboard? gg"+yG or :%y+<CR>?
+Editing	Indenting, outdenting, reindenting is easy with >14j >} <ap =i} == etc.
 Learning by doing	When you do something inefficiently, stop, u u u u, then redo the right way.
 Retabbing	From 2 spaces to 4: :set ts=2 noet | retab!, followed by :set ts=4 et | retab!
 
