@@ -25,6 +25,7 @@ Insert mode	CTRL-V u is very handy for entering Unicode chars, e.g. <C-V>u0259 y
 Insert mode	Define a mapping for CTRL-K (kill-line) as counterpart to CTRL-U, if you like.
 Insert mode	When writing Vim scripts, CTRL-X CTRL-V cleverly completes Vim commands!
 Insert mode	CTRL-X CTRL-F suggests/completes file name, repeat to continue completion.
+Insert mode	Use CTRL-X CTRL-L for line completion when typing out lots of similar lines.
 Visual block mode	O is like o but it moves to the opposite end in the same line.
 Visual block mode	Set 'virtualedit' to "all" and move onto tab chars and past end of line.
 Visual block mode	Use of 'virtualedit' is often limited. Make a mapping to toggle on/off.
@@ -162,6 +163,11 @@ Invocation and startup	Use --remote[-tab] options to open a new file with the ru
 Invocation and startup	Use GUI version of Vim as default shell editor: export EDITOR='gvim -f'.
 Invocation and startup	Option -o opens files in splits, -O in vertical splits, -p in tabs.
 Invocation and startup	Vim can be your |less|! This adds colour to your diffs: $ svn diff | less.sh
+Invocation and startup	If you frequently browse a ctagged codebase, start Vim on a tag: vim -t my_tag
+
+## GUI
+
+GUI Vim	Don't bother with 'guifont' format; use a dialog instead: :set guifont=*
 
 ## Example commands
 
