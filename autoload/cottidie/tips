@@ -22,7 +22,7 @@ Insert mode	CTRL-A inserts the most recently inserted text.
 Insert mode	Use CTRL-A when typing repetitive var names: **var1<Esc>a, <C-A>...
 Insert mode	When you realize you've made a typo, press CTRL-W and retype, it's faster.
 Insert mode	CTRL-V u is very handy for entering Unicode chars, e.g. <C-V>u0259 yields "ə".
-Insert mode	Define a mapping for CTRL-K (kill-line) as counterpart to CTRL-U, if you like.
+Insert mode	Consider defining a mapping for CTRL-K (kill-line) as counterpart to CTRL-U.
 Insert mode	When writing Vim scripts, CTRL-X CTRL-V cleverly completes Vim commands!
 Insert mode	CTRL-X CTRL-F suggests/completes file name, repeat to continue completion.
 Insert mode	Use CTRL-X CTRL-L for line completion when typing out lots of similar lines.
@@ -78,10 +78,12 @@ Change list	Drop a mark before travelling backwards in the change list with g; a
 ## Ex commands, command-line, substitution
 
 Substitution	Substitute interactively with :%s///gc, interrupt with <Esc>, repeat with g&.
-Substitution	Remap & to :&&<CR>, then repeat the most recent substitution with &.
+Substitution	Remap & to :&&<CR>, then repeat the most recent substitution easily with &.
+Substitution	It is recommended to always remap & to :&&<CR>. This lets you repeat :s/a/b/g.
 Substitution	:%s/pattern without replacement string simply removes the pattern.
 Substitution	The range '<,'> always applies line-wise; \%V helps overcome this limitation.
-Command-line	CTRL-A forces word expansion similar to bash's glob-expand-word command.
+Substitution	An alternative to :%s/foo/bar/c is /foo<CR>, :s//bar/<CR>, n, &, n, &, ...
+Command-line	CTRL-A forces word expansion similar to Bash's glob-expand-word command.
 Command-line	Remap CTRL-A to <Home> as a natural counterpart to the existing CTRL-E.
 Command-line	CTRL-R = lets you eval an expression, e.g. arithmetic expr, function call ...
 Command-line	:let shows defined variables, which you can filter by scope g: b: w: v: |E121|
@@ -110,6 +112,10 @@ Cursor movement	Vim has 1001 ways of moving the cursor. Sometimes even H M L can
 Windows	Need to edit the alternate file in a split? CTRL-W CTRL-^ does just that.
 Windows	CTRL-W _ maximizes current window vertically, CTRL-W | horizontally.
 Windows	CTRL-W T moves the current window to a new tab page.
+
+## Files, buffers
+
+Files and buffers	CTRL-G prints the file name, more info available with 1 CTRL-G and 2 CTRL-G.
 
 ## Registers, Marks
 
