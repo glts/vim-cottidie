@@ -20,7 +20,7 @@ Normal mode	ga shows decimal and hex value of char under cursor, g8 shows UTF-8 
 Normal mode	g<C-G> prints a column, line, word, char, and byte count for the buffer.
 Insert mode	CTRL-A inserts the most recently inserted text.
 Insert mode	Use CTRL-A when typing repetitive var names: **var1<Esc>a, <C-A>...
-Insert mode	When you realize you've made a typo, CTRL-W and retype, it's faster.
+Insert mode	When you realize you've made a typo, press CTRL-W and retype, it's faster.
 Insert mode	CTRL-V u is very handy for entering Unicode chars, e.g. <C-V>u0259 yields "ə".
 Insert mode	Define a mapping for CTRL-K (kill-line) as counterpart to CTRL-U, if you like.
 Insert mode	When writing Vim scripts, CTRL-X CTRL-V cleverly completes Vim commands!
