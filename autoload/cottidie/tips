@@ -51,6 +51,7 @@ Editing	cip<Esc> collapses blank line under cursor and adjacent blank lines into
 Editing	viw on whitespace selects it and all adjacent whitespace!
 Editing	How would you yank the whole buffer into the clipboard? gg"+yG or :%y+<CR>?
 Editing	Indenting, outdenting, reindenting is easy with >14j >} <ap =i} == etc.
+Editing	% is not just for navigating, it's also powerful with operators, e.g. y%.
 Learning by doing	When you do something inefficiently, stop, u u u u, then redo the right way.
 Retabbing	From 2 spaces to 4: :set ts=2 noet | retab!, followed by :set ts=4 et | retab!
 
@@ -97,6 +98,7 @@ Ex commands	:g is also handy for normal commands: :g/target/norm $daW or :g/targ
 Ex ranges	If you delete the '<,'> range by mistake just type its short synonym: *.
 Ex ranges	, separator puts context at cursor position, ; at preceding line specifier.
 Ex ranges	No need to reselect Visual area for '<,'> range, it remembers the last one.
+Ex ranges	Giving a [count] before pressing ":" translates to ":.,.+([count]-1)".
 
 ## Mappings, abbreviations
 
@@ -120,9 +122,10 @@ Files and buffers	CTRL-G prints the file name, more info available with 1 CTRL-G
 ## Registers, Marks
 
 Registers	c and d automatically fill registers "1 to "9, whereas y fills register "0.
+Registers	Use "1p followed by u . u . u . to toggle through old deletes. |redo-register|
 Registers	The easiest way to insert the current file name is pasting register "%.
 Registers	:set cpo+=> makes Vim insert a newline when appending text to a register.
-Marks	`` can sometimes be more precise than CTRL-O/CTRL-I for jumping back & forth.
+Marks	`` is sometimes more precise than CTRL-O/CTRL-I for jumping back and forth.
 Marks	After jumping to the last change with `. you can jump back again with ``.
 Marks	Having enclosed an area with two marks, jump to beginning/end with [` and ]`.
 Marks	`` and `. can be used in Visual/Operator-pending mode. CTRL-O and g; can't.
@@ -155,7 +158,7 @@ Tags	Prefer g CTRL-] over CTRL-] as it lets you choose when there are >1 matches
 
 ## Configuration, setup, plugins
 
-Settings	Get rid of the intro screen at startup by setting shortmess+=I.
+Settings	Get rid of the intro screen at startup: :set shortmess+=I
 Settings	For a more frugal GUI remove "Tm" from and add "c" to 'guioptions' flags.
 Settings	Keep swap files in one location with 'directory'. "~/tmp,." is a good setting.
 Settings	Setting 'filetype' is like setting 'syntax' + FileType events and ftplugins.
@@ -170,10 +173,11 @@ Invocation and startup	Use GUI version of Vim as default shell editor: export ED
 Invocation and startup	Option -o opens files in splits, -O in vertical splits, -p in tabs.
 Invocation and startup	Vim can be your |less|! This adds colour to your diffs: $ svn diff | less.sh
 Invocation and startup	If you frequently browse a ctagged codebase, start Vim on a tag: vim -t my_tag
+Invocation and startup	Emergency remote vimrc: $ vim -Nu <(curl http://me.github.io/dotfiles/.vimrc)
 
 ## GUI
 
-GUI Vim	Don't bother with 'guifont' format; use a dialog instead: :set guifont=*
+GUI Vim	Don't bother with the 'guifont' format; use a dialog instead: :set guifont=*
 
 ## Example commands
 
