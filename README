@@ -3,8 +3,9 @@ cottidie.vim
 
 Your quotidian Vim tip in 78 characters.
 
-Cottidie brings friendly, unobtrusive Vim tips to your messages area. At 78
-characters these have enough substance to inspire but not enough to distract.
+This Vim plugin brings friendly, syntax-highlighted Vim tips to your messages
+area. At 78 characters these have enough substance to inspire but not enough
+to distract. Try it out:
 
         :CottidieTip
 

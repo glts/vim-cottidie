@@ -5,8 +5,9 @@ License: Same terms as Vim itself (see |license|)
 
 DESCRIPTION					*cottidie*
 
-Cottidie brings friendly, unobtrusive Vim tips to your messages area.  At 78
-characters these have enough substance to inspire but not enough to distract.
+This plugin brings friendly, syntax-highlighted Vim tips to your messages
+area.  At 78 characters these have enough substance to inspire but not enough
+to distract.
 
 The location of the tips files is configurable, so this plugin may also serve
 you as a "daily tip" engine which draws from your own notes.  (Not actually

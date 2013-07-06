@@ -3,7 +3,7 @@
 " Date: 2013-07-06
 " GetLatestVimScripts: 0 0 :AutoInstall: cottidie.vim
 
-if exists('g:loaded_cottidie') || v:version < 703 || &cp
+if exists('g:loaded_cottidie') || v:version < 703 || &compatible
   finish
 endif
 
