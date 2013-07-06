@@ -14,6 +14,7 @@ Normal mode	gi takes you back to where you last inserted text |`^| and starts in
 Normal mode	A is to $a what "append" is to "go-end-type": compound meaning in single word.
 Normal mode	ga shows decimal and hex value of char under cursor, g8 shows UTF-8 bytes.
 Normal mode	g CTRL-G prints a column, line, word, char, and byte count for the buffer.
+Normal mode	* and # (and g*/g#) are vital navigation commands. Try to absorb them asap.
 Insert mode	CTRL-A inserts the most recently inserted text.
 Insert mode	Use CTRL-A when typing repetitive variable names: ivar1<Esc>a, <C-A>...
 Insert mode	When you realize you've made a typo, press CTRL-W and retype, it's faster.
@@ -22,6 +23,7 @@ Insert mode	Consider defining a mapping for CTRL-K (kill-line) as counterpart to
 Insert mode	When writing Vim scripts, CTRL-X CTRL-V cleverly completes Vim commands!
 Insert mode	CTRL-X CTRL-F suggests/completes file name, repeat to continue completion.
 Insert mode	Use CTRL-X CTRL-L for line completion when typing out lots of similar lines.
+Insert mode	CTRL-W deletes words. Prefer deleting WORDs? :inoremap <C-W> <C-\><C-O>dB
 Visual block mode	O is like o but it moves to the opposite end in the same line.
 Visual block mode	Set 'virtualedit' to "all" and move onto tab chars and past end of line.
 Visual block mode	Use of 'virtualedit' is often limited. Make a mapping to toggle on/off.
@@ -99,11 +101,11 @@ Ex ranges	Giving a [count] before pressing ":" translates to ":.,.+([count]-1)".
 
 # Mappings, abbreviations
 
-Mappings	:xmap is usually more appropriate for Visual mode mappings than :vmap.
+Mappings	For Visual mode mappings :xmap is usually more appropriate than :vmap.
 Mappings	Treat "nore" maps as the default, use plain :map only with good reason. |:no|
 Abbreviations	Add <C-G>u to your abbreviations for easy unexpansion: :iab def def<C-G>u...
 
-# Screen scrolling, windows, buffers, files, tabs
+# Windows, buffers, files, and navigation
 
 Scrolling	zt, zz, zb scroll to put the cursor at the top, center, bottom of the screen.
 Scrolling	Prefer zt zz zb over z<CR> z. z- as they preserve the cursor position.
@@ -112,8 +114,15 @@ Windows	Need to edit the alternate file in a split? CTRL-W CTRL-^ does just that
 Windows	CTRL-W _ maximizes current window vertically, CTRL-W | horizontally.
 Windows	CTRL-W T moves the current window to a new tab page.
 Windows and buffers	:q, :close, :bdel: Quit a window, close a window, close a buffer. Look it up!
+Buffers	A mapping can be as good as any buffer manager: :nnoremap L :ls<CR>:b<Space>
+Buffers	By default you can't |abandon| a modified buffer. With 'hidden' set, you can.
 Files and buffers	CTRL-G prints the file name, more info available with 1 CTRL-G and 2 CTRL-G.
 Files and buffers	:b does partial matching. If "expr.js" is the destination, ":b xp" is the way.
+Files and buffers	Vim has its own idea of a current working directory. Use :pwd, :cd, and :lcd.
+Files	:browse oldfiles (:bro old) is Vim's "most recently used files" feature.
+Files	:r can also open file paths starting with http: ftp: scp:, see |netrw-urls|.
+Tags	CTRL-W } or :pt to preview tag under cursor, CTRL-W z or :pc to close.
+Tags	Prefer g CTRL-] over CTRL-] as it lets you choose when there are >1 matches.
 
 # Registers, Marks
 
@@ -145,13 +154,6 @@ Vimdiff	do (diff-obtain) and dp (diff-put) are the essential commands here.
 Vimdiff	To diff the current file with another do :vert botr diffsp <file2>.
 Vimdiff	[c ]c move to next diff. If lines are missing, move *after* the missing part.
 
-# File navigation
-
-Files	:browse oldfiles (:bro old) is Vim's "most recently used files" feature.
-Files	:r can also open file paths starting with http: ftp: scp:, see |netrw-urls|.
-Tags	CTRL-W } or :pt to preview tag under cursor, CTRL-W z or :pc to close.
-Tags	Prefer g CTRL-] over CTRL-] as it lets you choose when there are >1 matches.
-
 # Configuration, setup, plugins
 
 Settings	Get rid of the intro screen at startup: :set shortmess+=I
@@ -173,7 +175,7 @@ Invocation and startup	Emergency remote vimrc: $ vim -Nu <(curl http://me.github
 
 # GUI
 
-GUI Vim	Don't bother with the 'guifont' format; use a dialog instead: :set guifont=*
+GUI Vim	Don't bother with the 'guifont' format, use a dialog instead: :set guifont=*
 
 # Example commands
 
@@ -197,11 +199,12 @@ Vim script	Always, without exception, use -# or -? in string comparison ops: |ex
 
 # Unclassified
 
+Encodings	Unicode control freaks rely on ga and g8 for character information.
 Jargon	A Vimmer deletes, yanks, puts instead of cutting, copying, pasting!
 Miscellaneous	It's worth reading up on |hit-enter-prompt| and |more-prompt| sometime.
 Miscellaneous	Keep your right hand in the jkl; position even when using hjkl movement.
 Miscellaneous	There is an interactive options window at :options.
 Miscellaneous	Nothing to do? Implement the missing Visual mode counterparts to * and #!
-Miscellaneous	Quiz time: remember what the control characters ^I ^M ^J ^[ ^H ^@ stand for?
+Trivia	Quiz time: remember what the control characters ^I ^M ^J ^[ ^H ^@ stand for?
 
 # vim:ft=help:tw=0:ts=32:cc=110:columns=124:noet:
