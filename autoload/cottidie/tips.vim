@@ -1,6 +1,6 @@
 " cottidie.vim - Your quotidian Vim tip in 78 characters
 " Author: glts <676c7473@gmail.com>
-" Date: 2013-07-06
+" Date: 2013-07-07
 
 if !exists('g:cottidie_no_default_tips')
   let g:cottidie_no_default_tips = 0
@@ -20,9 +20,9 @@ function! s:OpenCottidieBuffer()
     return s:InitCottidieBuffer()
   else
     if bufwinnr(cbufnr) != -1
-      execute bufwinnr(cbufnr).'wincmd w'
+      execute bufwinnr(cbufnr) . 'wincmd w'
     else
-      execute 'silent keepalt botright vsplit +buffer'.cbufnr
+      execute 'silent keepalt botright vsplit +buffer' . cbufnr
     endif
     return 1
   endif
@@ -38,15 +38,15 @@ function! s:InitCottidieBuffer()
   for f in map(s:tips_files, 'v:val =~# urlre ? v:val : fnamemodify(v:val, ":p")')
     let wipeout = !bufexists(f)
     if f =~# urlre || filereadable(f)
-      execute 'silent 0read '.fnameescape(f)
+      execute 'silent 0read ' . fnameescape(f)
       if wipeout
-        execute 'silent bwipeout ^'.fnameescape(f).'$'
+        execute 'silent bwipeout ^' . fnameescape(f) . '$'
       endif
     endif
   endfor
 
   " Make sure we are still in the Cottidie buffer, netrw may have messed it up
-  execute bufwinnr(bufnr('^__Cottidie__$')).'wincmd w'
+  execute bufwinnr(bufnr('^__Cottidie__$')) . 'wincmd w'
 
   " Force loading help syntax items, store 'cole' setting, and fix up tips
   setlocal filetype=help
@@ -103,7 +103,7 @@ function! s:DisplayTip(topic, text, echomsg)
     let tagre     = '\\\@<!|[#-)!+-~]\+|'
     let specialre = '\%(<[-a-zA-Z0-9_]\+>\)\|\%(CTRL-\%([a-zA-Z]\+\|.\)\)\|\[range]\|\[count]\|{cmd}'
     let optionre  = '''[a-z]\{2,\}'''
-    let allre = '\%('.join([tagre, specialre, optionre], '\|').'\)'
+    let allre = '\%(' . join([tagre, specialre, optionre], '\|') . '\)'
     let parts = split(a:text, '\%('.allre.'\zs\)\|\%(.\{-1,}'.allre.'\@=\zs\)')
 
     redraw
