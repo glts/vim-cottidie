@@ -5,11 +5,11 @@ License: Same terms as Vim itself (see |license|)
 
 DESCRIPTION					*cottidie*
 
-Cottidie brings you Vim tips in as unobtrusive a way as possible.  At 78
-characters, these have enough substance to inspire but not enough to distract.
+Cottidie brings friendly, unobtrusive Vim tips to your messages area.  At 78
+characters these have enough substance to inspire but not enough to distract.
 
-The location of the tips file is configurable, so this plugin may also serve
-you as a "daily tip" engine which draws from your own notes. (Not actually
+The location of the tips files is configurable, so this plugin may also serve
+you as a "daily tip" engine which draws from your own notes.  (Not actually
 daily though, it doesn't include any timing mechanism.)
 
 						*:CottidieTip*
@@ -19,7 +19,7 @@ daily though, it doesn't include any timing mechanism.)
 
 It may be tempting to set this up to fire on the |VimEnter| event: >
 
-    :autocmd VimEnter * CottidieTip
+	autocmd VimEnter * CottidieTip
 
 Unfortunately, Vim's handling of |:echo| messages in autocommands is buggy, so
 this may or may not work depending on what kind of Vim you are using.
@@ -27,26 +27,21 @@ this may or may not work depending on what kind of Vim you are using.
 SETTINGS					*cottidie-settings*
 
 This plugin works out of the box as it comes packaged with a nice stockpile of
-tips.  The tips source can be adjusted with the following options.
+tips.  The tips sources can be adjusted with the following options.
 
-						*g:cottidie_default_tips*
-    g:cottidie_default_tips ~
-    Path to default tips file.
+						*g:cottidie_tips_files*
+	g:cottidie_tips_files ~
+	List of paths to tips files.  Any path Vim can |:read| is allowed,
+	including remote paths like ftp://ftp.me.com/tips.txt.  Example: >
 
-    You can provide your own tips file.  Any path Vim can |:read| is allowed,
-    including remote paths like http://glts.github.io/vim-cottidie/tips.
-
-    The default tips file must contain the magic string "cottidie" or "tips"
-    in the first three non-blank lines.  For the syntax see the included file.
-    Leave this variable empty to disable the default tips file.
-
-						*g:cottidie_extra_tips*
-    g:cottidie_extra_tips ~
-    List of paths to additional user-supplied tips files.  Example: >
-
-	let g:cottidie_extra_tips =
-	    \ ['~/mytips.txt', 'ftp://ftp.me.com/cottidie/tips']
+	let g:cottidie_tips_files =
+	    \ ['~/mytips.txt', 'http://glts.github.io/vim-cottidie/tips']
 <
-    No validation takes place, file content is used as is.
+	User-supplied tips are used in addition to the default tips, unless --
+
+						*g:cottidie_no_default_tips*
+	g:cottidie_no_default_tips ~
+	Disable default tips.  Setting this to 1 disables loading of the
+	default tips.
 
  vim:tw=78:ts=8:ft=help:norl:
