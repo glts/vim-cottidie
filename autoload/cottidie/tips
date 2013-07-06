@@ -2,7 +2,7 @@
 
 # Modes and editing
 
-Modes	Don't use CTRL-C as a substitute for <Esc> -- it's insidiously different.
+Modes	Don't use CTRL-C as a substitute for <Esc> as it's insidiously different.
 Modes	There are a dozen distinct |vim-modes| and prompts. Do you know them all?
 Normal mode	gI is the dedicated command for 0i.
 Normal mode	:x and ZZ are like :wq, but they don't write when no changes were made.
