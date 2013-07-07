@@ -35,7 +35,7 @@ With pathogen.vim the installation is as simple as:
 FQA
 ---
 
-> My tip appears truncated/incomplete/otherwise mangled in the messages
+> The tips appear truncated/incomplete/otherwise mangled in the messages
 > area.
 
 I'm aware of the issues with `:echo`. Hopefully I can find the time to
@@ -45,6 +45,6 @@ on the vim_dev mailing list.
 
 > Vim errors out with `E484` when it tries to load my remote tips file.
 
-Try adding `nested` to the `VimEnter` autocommand so that it reads
+Try adding "nested" to the `VimEnter` autocommand so that it reads
 
     autocmd VimEnter * nested CottidieTip
