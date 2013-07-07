@@ -61,12 +61,14 @@ Searching	How often does X occur in file? Do /X<CR> and then :%s///gn to find ou
 Searching	Use /<CR> and ?<CR> to change the direction of the last search.
 Searching	/pattern<CR> to search, v//e<CR> to Visual select the match under the cursor.
 Searching	On the / command-line, CTRL-R CTRL-W completes partial match under the cursor!
-Vim regexps	Speak Perl? Here's a phrasebook for a* a+ a? a*? a+?: a* a\+ a\= a\{-} a\{-1,}
-Vim regexps	Advanced Perl phrasebook (?:a) (?=a) (?!a) (?<=a): \%(a\) a\@= a\@! a\@<=
-Vim regexps	The Perlish /s flag is missing, but there's the golf club |\_.| for that.
-Vim regexps	Zero-width assertions (\@= ...) can often be replaced with faster \zs and \ze.
-Vim regexps	Avoid escaping \+ \| \( \) etc. by always using the "very magic" switch |\v|.
-Vim regexps	Understand branches |/\&|. Example: /[^aeiou]\&[a-z] matches consonants only.
+Vim regular expressions	Speak Perl? Here's a phrasebook for a* a+ a? a*? a+?: a* a\+ a\= a\{-} a\{-1,}
+Vim regular expressions	Advanced Perl phrasebook (?:a) (?=a) (?!a) (?<=a): \%(a\) a\@= a\@! a\@<=
+Vim regular expressions	The Perlish /s flag is missing, but there's the golf club |\_.| for that.
+Vim regular expressions	Zero-width assertions (\@= ...) can often be replaced with faster \zs and \ze.
+Vim regular expressions	Avoid escaping \+ \| \( \) etc. by always using the "very magic" switch |\v|.
+Vim regular expressions	Understand branches |/\&|. Example: /[^aeiou]\&[a-z] matches consonants only.
+Vim regular expressions	Perl hackers: In Vim, \< and \> match word boundaries. \b matches backspace.
+Vim regular expressions	\q matches "q". But as an unused escape it may change in the future. |/\|
 
 # Undo, changes
 
