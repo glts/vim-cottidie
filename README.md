@@ -43,8 +43,8 @@ look into this, but until then refer to [this
 report](https://groups.google.com/d/msg/vim_dev/o5VRJl9ZbsA/-o-JQRHcvhcJ)
 on the vim_dev mailing list.
 
-> Vim errors out with `E484` when it tries to load my remote tips file.
+> Vim errors out with E484 when it tries to load my remote tips file.
 
-Try adding "nested" to the `VimEnter` autocommand so that it reads
+Try adding "nested" to the VimEnter autocommand so that it reads
 
     autocmd VimEnter * nested CottidieTip
