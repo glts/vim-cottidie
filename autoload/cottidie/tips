@@ -14,6 +14,7 @@ Normal mode	gi takes you back to where you last inserted text |`^| and starts in
 Normal mode	ga shows decimal and hex value of a character, g8 shows UTF-8 bytes.
 Normal mode	g CTRL-G prints a column, line, word, char, and byte count for the buffer.
 Normal mode	* and # (and g*/g#) are vital navigation commands. Try to absorb them asap.
+Normal mode	The counterpart to ^ is g_: Move the cursor to the last non-blank in line.
 Insert mode	CTRL-A inserts the most recently inserted text.
 Insert mode	Use CTRL-A when typing repetitive variable names: ivar1<Esc>a, <C-A>...
 Insert mode	When you realize you've made a typo, press CTRL-W and retype, it's faster.
@@ -164,6 +165,7 @@ Settings	Setting 'filetype' is like setting 'syntax' + FileType events and ftplu
 Settings	'list' reveals unprintable chars and is awarded the "most opaque option name".
 Settings	Swap inconveniently located |`| with |'|: :nnoremap ' `, :nnoremap ` '.
 Setup	The matchit plugin enhances your |%|. It's in the manual at |matchit-install|.
+Setup	:Man displays man pages in Vim, activate it with: :runtime! ftplugin/man.vim
 
 # Invocation
 
