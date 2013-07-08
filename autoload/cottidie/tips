@@ -69,6 +69,7 @@ Vim regular expressions	Avoid escaping \+ \| \( \) etc. by always using the "ver
 Vim regular expressions	Understand branches |/\&|. Example: /[^aeiou]\&[a-z] matches consonants only.
 Vim regular expressions	Perl hackers: In Vim, \< and \> match word boundaries. \b matches backspace.
 Vim regular expressions	\q matches "q". But as an unused escape it may change in the future. |/\|
+Vim regular expressions	What is a word boundary? \< is \k\@<!\k\@=, and \> is \k\@<=\k\@!.
 
 # Undo, changes
 
@@ -94,8 +95,10 @@ Command-line	:command lists all defined commands, filterable by beginning: :com 
 Command-line	Set up %% to insert dirname of current file: :cabbr <expr> %% expand('%:p:h')
 Command-line	:map lists defined mappings, filterable by beginning. For instance: :map [
 Command-line	:abbr lists defined abbreviations, filterable by beginning. Example: :abbr @
+Command-line	<Tab> toggles through completion candidates, CTRL-D shows them all at once.
 Ex commands	Dropping marks and using :'a,'b can be an alternative to Visual selection.
 Ex commands	:g is also handy for normal commands: :g/target/norm $daW or :g/target/norm A,
+Ex addresses	Old Vi mandates that in place of :+5 and :-2 you may also use :+++++ and :--.
 Ex ranges	If you delete the '<,'> range by mistake just type its short synonym: *
 Ex ranges	, separator puts context at cursor position, ; at preceding line specifier.
 Ex ranges	No need to reselect Visual area for '<,'> range, the last one is remembered.
@@ -121,6 +124,7 @@ Buffers	By default you can't |abandon| a modified buffer. With 'hidden' set, you
 Files and buffers	CTRL-G prints the file name, more info available with 1 CTRL-G and 2 CTRL-G.
 Files and buffers	:b does partial matching. If "expr.js" is the destination, ":b xp" is the way.
 Files and buffers	Vim has its own idea of a current working directory. Use :pwd, :cd, and :lcd.
+Files and buffers	:b understands ^ and $ anchors. So you might use :b y$ to switch to "~/lizzy".
 Files	:browse oldfiles (:bro old) is Vim's "most recently used files" feature.
 Files	:r can also open file paths starting with http: ftp: scp:, see |netrw-urls|.
 Files	Saving and opening essentials are :write :update :saveas :edit :file :find.
@@ -190,6 +194,7 @@ Help	:helpgrep is exceptional in that it expects a regexp without // delimiters.
 Help	Cry for help with :h!<CR>, Vim will be there for you.
 Help	There is a handy cross-referenced list with all Vim commands at :h index.
 Help	:h quickref has a thematically grouped Vim commands reference.
+Help	CTRL-D is one of the most effective tools to navigate the help: :h gist<C-D>
 
 # Vim script
 
