@@ -199,6 +199,8 @@ Help	CTRL-D is one of the most effective tools to navigate the help: :h gist<C-D
 # Vim script
 
 Vim script	Always, without exception, use -# or -? in string comparison ops: |expr-==#|.
+Vim script	Write maintainable code. Use :function :else :return, not :fu :el :retu.
+Vim script	Abbreviated commands really :r :no :fun. Use :read :noremap :function instead.
 
 # Unclassified
 
