@@ -70,6 +70,8 @@ Vim regular expressions	Understand branches |/\&|. Example: /[^aeiou]\&[a-z] mat
 Vim regular expressions	Perl hackers: In Vim, \< and \> match word boundaries. \b matches backspace.
 Vim regular expressions	\q matches "q". But as an unused escape it may change in the future. |/\|
 Vim regular expressions	What is a word boundary? \< is \k\@<!\k\@=, and \> is \k\@<=\k\@!.
+Vim regular expressions	A search for "2^3" needs no escaping. ^ has no special meaning in mid-line.
+Vim regular expressions	/\$a<CR> and /$a<CR> match the same. $ needs escaping only when at the end.
 
 # Undo, changes
 
