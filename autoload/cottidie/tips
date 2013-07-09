@@ -15,6 +15,7 @@ Normal mode	ga shows decimal and hex value of a character, g8 shows UTF-8 bytes.
 Normal mode	g CTRL-G prints a column, line, word, char, and byte count for the buffer.
 Normal mode	* and # (and g*/g#) are vital navigation commands. Try to absorb them asap.
 Normal mode	The counterpart to ^ is g_: Move the cursor to the last non-blank in line.
+Normal mode	gg and G are opposites, but [count]gg and [count]G are the same.
 Insert mode	CTRL-A inserts the most recently inserted text.
 Insert mode	Use CTRL-A when typing repetitive variable names: ivar1<Esc>a, <C-A>...
 Insert mode	When you realize you've made a typo, press CTRL-W and retype, it's faster.
