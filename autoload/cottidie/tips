@@ -144,6 +144,7 @@ Registers	c and d automatically fill registers "1 to "9, whereas y fills registe
 Registers	"1p followed by u . u . u . toggles through old deletes. |redo-register|
 Registers	The easiest way to insert the current file name is pasting register "%.
 Registers	:set cpo+=> makes Vim insert a newline when appending text to a register.
+Registers	A clobbered register is an unnecessary pain: Consider mappings with "_.
 Marks	`` is sometimes more precise than CTRL-O/CTRL-I for jumping back and forth.
 Marks	After jumping to the last change with `. you can jump back again with ``.
 Marks	Having enclosed an area with two marks, jump to beginning/end with [` and ]`.
