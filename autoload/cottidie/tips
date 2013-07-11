@@ -204,6 +204,7 @@ Help	:h quickref has a thematically grouped Vim commands reference.
 Help	CTRL-D is one of the most effective tools to navigate the help: :h gist<C-D>
 Help	The user manual is a terrific read. Make a plan and read it. |usr_toc|
 Help	"Everything you always wanted to know is in the Vim help files." Mind |02.8|.
+Help	The |help-summary| is designed to help you help yourself.
 
 # Vim script
 
@@ -217,6 +218,8 @@ Encodings	Unicode control freaks rely on ga and g8 for character information.
 Jargon	A Vimmer deletes, yanks, puts instead of cutting, copying, pasting.
 Tricks	The "sudo tee" trick: Write the file as the superuser: :!sudo tee % >/dev/null
 Tricks	Repurpose :[range]g to repeat an unrelated action N times: :1,78g/^/1s/$/=/
+Tricks	Ex mode as a poor man's quickfix list: Q, :g/TODO/vi<CR>, Q, Q, Q, :vi<CR>.
+Tricks	Swap strings ( never occurs): :g/^/s/foo//g | s/bar/foo/g | s//bar/g<CR>
 Miscellaneous	It's worth reading up on |hit-enter-prompt| and |more-prompt| sometime.
 Miscellaneous	Keep your right hand in the jkl; position even when using hjkl movement.
 Miscellaneous	Nothing to do? Implement the missing Visual mode counterparts to * and #!
