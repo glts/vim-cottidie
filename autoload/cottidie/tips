@@ -16,6 +16,8 @@ Normal mode	g CTRL-G prints a column, line, word, char, and byte count for the b
 Normal mode	* and # (and g*/g#) are vital navigation commands. Try to absorb them asap.
 Normal mode	The counterpart to ^ is g_: Move the cursor to the last non-blank in line.
 Normal mode	gg and G are opposites, but [count]gg and [count]G are the same.
+Normal mode	Some normal mode commands mirror Ex addressing: - + / ? ' :- :+ :/ :? :'
+Normal mode	Four command "prefixes" have their own section in the |index|: CTRL-W [ g z
 Insert mode	CTRL-A inserts the most recently inserted text.
 Insert mode	Use CTRL-A when typing repetitive variable names: ivar1<Esc>a, <C-A>...
 Insert mode	When you realize you've made a typo, press CTRL-W and retype, it's faster.
@@ -51,6 +53,7 @@ Editing	viw on whitespace selects it and all adjacent whitespace.
 Editing	How would you yank the whole buffer into the clipboard? gg"+yG or :%y+<CR>?
 Editing	Indenting, outdenting, reindenting is easy with >8j >} <ap =i} == and friends.
 Editing	% is not just for navigating, it's also powerful with operators, e.g. y%.
+Editing	The longer a repetitive edit takes, the more effort spend automating it.
 Learning by doing	When you do something inefficiently, stop, u u u u, then redo the right way.
 Retabbing	From 2 spaces to 4: :set ts=2 noet | retab!, followed by :set ts=4 et | retab!
 
@@ -173,6 +176,7 @@ Settings	Keep swap files in one location with 'directory'. "~/tmp,." is a good s
 Settings	Setting 'filetype' is like setting 'syntax' + FileType events and ftplugins.
 Settings	'list' reveals unprintable chars and is awarded the "most opaque option name".
 Settings	Swap inconveniently located |`| with |'|: :nnoremap ' `, :nnoremap ` '.
+Settings	There is an interactive options window at :options.
 Setup	The matchit plugin enhances your |%|. It's in the manual at |matchit-install|.
 Setup	:Man displays man pages in Vim, activate it with: :runtime! ftplugin/man.vim
 
@@ -198,6 +202,8 @@ Help	Cry for help with :h!<CR>, Vim will be there for you.
 Help	There is a handy cross-referenced list with all Vim commands at :h index.
 Help	:h quickref has a thematically grouped Vim commands reference.
 Help	CTRL-D is one of the most effective tools to navigate the help: :h gist<C-D>
+Help	The user manual is a terrific read. Make a plan and read it. |usr_toc|
+Help	"Everything you always wanted to know is in the Vim help files." Mind |02.8|.
 
 # Vim script
 
@@ -210,9 +216,9 @@ Vim script	Abbreviated commands really :r :no :fun. Use :read :noremap :function
 Encodings	Unicode control freaks rely on ga and g8 for character information.
 Jargon	A Vimmer deletes, yanks, puts instead of cutting, copying, pasting.
 Tricks	The "sudo tee" trick: Write the file as the superuser: :!sudo tee % >/dev/null
+Tricks	Repurpose :[range]g to repeat an unrelated action N times: :1,78g/^/1s/$/=/
 Miscellaneous	It's worth reading up on |hit-enter-prompt| and |more-prompt| sometime.
 Miscellaneous	Keep your right hand in the jkl; position even when using hjkl movement.
-Miscellaneous	There is an interactive options window at :options.
 Miscellaneous	Nothing to do? Implement the missing Visual mode counterparts to * and #!
 Trivia	Quiz time: remember what the control characters ^I ^M ^J ^[ ^H ^@ stand for?
 
