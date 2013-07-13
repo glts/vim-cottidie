@@ -1,6 +1,6 @@
 " cottidie.vim - Your quotidian Vim tip in 78 characters
 " Author: glts <676c7473@gmail.com>
-" Date: 2013-07-07
+" Date: 2013-07-13
 
 if !exists('g:cottidie_no_default_tips')
   let g:cottidie_no_default_tips = 0
@@ -101,7 +101,7 @@ function! s:DisplayTip(topic, text, echomsg)
     echomsg a:text
   else
     let tagre     = '\\\@<!|[#-)!+-~]\+|'
-    let specialre = '\%(<[-a-zA-Z0-9_]\+>\)\|\%(CTRL-\%([a-zA-Z]\+\|.\)\)\|\[range]\|\[count]\|{cmd}'
+    let specialre = '\%(<[-a-zA-Z0-9_]\+>\)\|\%(CTRL-\%([a-zA-Z]\+\|.\)\)\|\[range]\|\[count]\|{cmd}\|{string}'
     let optionre  = '''[a-z]\{2,\}'''
     let allre = '\%(' . join([tagre, specialre, optionre], '\|') . '\)'
     let parts = split(a:text, '\%('.allre.'\zs\)\|\%(.\{-1,}'.allre.'\@=\zs\)')

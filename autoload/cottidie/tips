@@ -54,6 +54,7 @@ Editing	How would you yank the whole buffer into the clipboard? gg"+yG or :%y+<C
 Editing	Indenting, outdenting, reindenting is easy with >8j >} <ap =i} == and friends.
 Editing	% is not just for navigating, it's also powerful with operators, e.g. y%.
 Editing	The longer a repetitive edit takes, the more effort spend automating it.
+Editing	Type a function call as afunc()<Esc>iarg<Esc> for two meaningful undo states.
 Learning by doing	When you do something inefficiently, stop, u u u u, then redo the right way.
 Retabbing	From 2 spaces to 4: :set ts=2 noet | retab!, followed by :set ts=4 et | retab!
 
@@ -92,6 +93,7 @@ Substitution	:%s/pattern without replacement string simply removes the matches.
 Substitution	The range '<,'> always applies line-wise; \%V helps overcome this limitation.
 Substitution	An alternative to :%s/foo/bar/c is /foo<CR>, :s//bar/<CR>, n, &, n, &, ...
 Substitution	:~& replaces different targets with same word: /X<CR> :~&<CR> /Y<CR> :~&<CR>
+Substitution	In the replacement, & and ~ are special: whole match and previous {string}.
 Command-line	CTRL-A forces word expansion similar to Bash's glob-expand-word command.
 Command-line	Remap CTRL-A to <Home> as a natural counterpart to the existing CTRL-E.
 Command-line	CTRL-R = lets you eval an expression, e.g. arithmetic expr, function call ...
@@ -225,5 +227,6 @@ Miscellaneous	It's worth reading up on |hit-enter-prompt| and |more-prompt| some
 Miscellaneous	Keep your right hand in the jkl; position even when using hjkl movement.
 Miscellaneous	Nothing to do? Implement the missing Visual mode counterparts to * and #!
 Trivia	Quiz time: remember what the control characters ^I ^M ^J ^[ ^H ^@ stand for?
+The Zen of Vim	Vim is a plain text editor, not a WYSIWYG editor. Set 'conceallevel' to 0.
 
 # vim:ft=help:tw=0:ts=32:cc=110:noet:nowrap:

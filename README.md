@@ -41,7 +41,7 @@ FQA
 I'm aware of the issues with `:echo`. Hopefully I can find the time to
 look into this, but until then refer to [this
 report](https://groups.google.com/d/msg/vim_dev/o5VRJl9ZbsA/-o-JQRHcvhcJ)
-on the vim_dev mailing list.
+on the vim\_dev mailing list.
 
 > Vim errors out with E484 when it tries to load my remote tips file.
 
