@@ -19,7 +19,7 @@ Normal mode	gg and G are opposites, but [count]gg and [count]G are the same.
 Normal mode	Some normal mode commands mirror Ex addressing: - + / ? ' :- :+ :/ :? :'
 Normal mode	Four command "prefixes" have their own section in the |index|: CTRL-W [ g z
 Insert mode	CTRL-A inserts the most recently inserted text.
-Insert mode	Use CTRL-A when typing repetitive variable names: ivar1<Esc>a, <C-A>...
+Insert mode	Use CTRL-A when doing repetitive typing: ivar<Esc>a1, <C-A>2, <C-A>3, ...
 Insert mode	When you realize you've made a typo, press CTRL-W and retype, it's faster.
 Insert mode	CTRL-V u is very handy for entering Unicode chars, e.g. <C-V>u0259 yields "ə".
 Insert mode	Consider defining a mapping for CTRL-K (kill-line) as counterpart to CTRL-U.
@@ -180,6 +180,7 @@ Settings	Setting 'filetype' is like setting 'syntax' + FileType events and ftplu
 Settings	'list' reveals unprintable chars and is awarded the "most opaque option name".
 Settings	Swap inconveniently located |`| with |'|: :nnoremap ' `, :nnoremap ` '.
 Settings	There is an interactive options window at :options.
+Settings	Five ways to manipulate boolean options: :set list nolist list! invlist list?
 Setup	The matchit plugin enhances your |%|. It's in the manual at |matchit-install|.
 Setup	:Man displays man pages in Vim, activate it with: :runtime! ftplugin/man.vim
 
