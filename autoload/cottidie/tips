@@ -180,7 +180,8 @@ Settings	Setting 'filetype' is like setting 'syntax' + FileType events and ftplu
 Settings	'list' reveals unprintable chars and is awarded the "most opaque option name".
 Settings	Swap inconveniently located |`| with |'|: :nnoremap ' `, :nnoremap ` '.
 Settings	There is an interactive options window at :options.
-Settings	Five ways to manipulate boolean options: :set list nolist list! invlist list?
+Settings	Six ways to poke a boolean option: :set list nolist list! invlist list? list&
+Settings	Bare :set shows settings that differ from the default, :set all shows all.
 Setup	The matchit plugin enhances your |%|. It's in the manual at |matchit-install|.
 Setup	:Man displays man pages in Vim, activate it with: :runtime! ftplugin/man.vim
 
