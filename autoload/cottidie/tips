@@ -138,6 +138,7 @@ Files and buffers	:b understands ^ and $ anchors. So you might use :b y$ to swit
 Files	:browse oldfiles (:bro old) is Vim's "most recently used files" feature.
 Files	:r can also open file paths starting with http: ftp: scp:, see |netrw-urls|.
 Files	Saving and opening essentials are :write :update :saveas :edit :file :find.
+Files	:find {file} becomes useful once you've ":set path+=**". Put it in your vimrc.
 Argument list	Having populated the |arglist| with files, act on them: :argdo %s/foo/bar/ge
 Tags	CTRL-W } or :pt to preview tag under cursor, CTRL-W z or :pc to close.
 Tags	Prefer g CTRL-] over CTRL-] as it lets you choose when there are >1 matches.

@@ -101,7 +101,7 @@ function! s:DisplayTip(topic, text, echomsg)
     echomsg a:text
   else
     let tagre     = '\\\@<!|[#-)!+-~]\+|'
-    let specialre = '\%(<[-a-zA-Z0-9_]\+>\)\|\%(CTRL-\%([a-zA-Z]\+\|.\)\)\|\[range]\|\[count]\|{cmd}\|{string}'
+    let specialre = '\%(<[-a-zA-Z0-9_]\+>\)\|\%(CTRL-\%([a-zA-Z]\+\|.\)\)\|\[range]\|\[count]\|{cmd}\|{string}\|{file}'
     let optionre  = '''[a-z]\{2,\}'''
     let allre = '\%(' . join([tagre, specialre, optionre], '\|') . '\)'
     let parts = split(a:text, '\%('.allre.'\zs\)\|\%(.\{-1,}'.allre.'\@=\zs\)')
