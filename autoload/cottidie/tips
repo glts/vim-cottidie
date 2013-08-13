@@ -55,8 +55,10 @@ Editing	Indenting, outdenting, reindenting is easy with >8j >} <ap =i} == and fr
 Editing	% is not just for navigating, it's also powerful with operators, e.g. y%.
 Editing	The longer a repetitive edit takes, the more effort spend automating it.
 Editing	Type a function call as afunc()<Esc>iarg<Esc> for two meaningful undo states.
+Editing	Prefer operators to Visual mode: only operators are reliably repeatable with .
 Learning by doing	When you do something inefficiently, stop, u u u u, then redo the right way.
 Retabbing	From 2 spaces to 4: :set ts=2 noet | retab!, followed by :set ts=4 et | retab!
+Interruption	Use CTRL-C to abort runaway macros and Ex commands (when <Esc> is not enough).
 
 # Navigation, searching, jumps, changes
 
@@ -216,6 +218,7 @@ Help	The |help-summary| is designed to help you help yourself.
 Vim script	Always, without exception, use -# or -? in string comparison ops: |expr-==#|.
 Vim script	Write maintainable code. Use :function :else :return, not :fu :el :retu.
 Vim script	Abbreviated commands really :r :no :fun. Use :read :noremap :function instead.
+Writing scripts	As a new author, seek guidance in existing plugins: :args $VIMRUNTIME/**/*.vim
 
 # Unclassified
 
@@ -225,6 +228,7 @@ Tricks	The "sudo tee" trick: Write the file as the superuser: :!sudo tee % >/dev
 Tricks	Repurpose :[range]g to repeat an unrelated action N times: :1,78g/^/1s/$/=/
 Tricks	Ex mode as a poor man's quickfix list: Q, :g/TODO/vi<CR>, Q, Q, Q, :vi<CR>.
 Tricks	Swap strings ( never occurs): :g/^/s/foo//g | s/bar/foo/g | s//bar/g<CR>
+Tricks	Auto-scrolling through a recursive map with the gs command: :nmap j gj1gsj
 Miscellaneous	It's worth reading up on |hit-enter-prompt| and |more-prompt| sometime.
 Miscellaneous	Keep your right hand in the jkl; position even when using hjkl movement.
 Miscellaneous	Nothing to do? Implement the missing Visual mode counterparts to * and #!
