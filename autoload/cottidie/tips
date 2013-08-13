@@ -63,7 +63,7 @@ Interruption	Use CTRL-C to abort runaway macros and Ex commands (when <Esc> is n
 # Navigation, searching, jumps, changes
 
 Navigation	Quicksearch: [I prints all lines containing the word under the cursor.
-Searching	:nohls is used so often it's best to map it to something simple, e.g. <BS>.
+Searching	:nohls is used often, it's best to map it to something simple: <BS> or <C-L>.
 Searching	How often does X occur in file? Do /X<CR> and then :%s///gn to find out.
 Searching	Use /<CR> and ?<CR> to change the direction of the last search.
 Searching	/pattern<CR> to search, v//e<CR> to Visual select the match under the cursor.
