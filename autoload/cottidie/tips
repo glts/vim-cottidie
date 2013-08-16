@@ -96,6 +96,8 @@ Substitution	The range '<,'> always applies line-wise; \%V helps overcome this l
 Substitution	An alternative to :%s/foo/bar/c is /foo<CR>, :s//bar/<CR>, n, &, n, &, ...
 Substitution	:~& replaces different targets with same word: /X<CR> :~&<CR> /Y<CR> :~&<CR>
 Substitution	In the replacement, & and ~ are special: whole match and previous {string}.
+Substitution	Substitute X for the word under the cursor: Press * and then :%s//X/g<CR>
+Substitution	One way of substituting X for the word under the cursor: :%s/<C-R><C-W>/X/g
 Command-line	CTRL-A forces word expansion similar to Bash's glob-expand-word command.
 Command-line	Remap CTRL-A to <Home> as a natural counterpart to the existing CTRL-E.
 Command-line	CTRL-R = lets you eval an expression, e.g. arithmetic expr, function call ...
@@ -118,6 +120,7 @@ Ex ranges	Giving a [count] before pressing : translates to ":.,.+([count]-1)".
 
 Mappings	For Visual mode mappings :xmap is usually more appropriate than :vmap.
 Mappings	Treat "nore" maps as the default, use plain :map only with good reason. |:no|
+Mappings	Think recursive maps are special? Then you are ready for |map-self-destroy|.
 Abbreviations	Add <C-G>u to your abbreviations for easy unexpansion: :iab def def<C-G>u...
 
 # Windows, buffers, files, and navigation
@@ -196,6 +199,7 @@ Invocation and startup	Option -o opens files in splits, -O in vertical splits, -
 Invocation and startup	Vim can be your |less|! This adds colour to your diffs: $ svn diff | less.sh
 Invocation and startup	If you frequently browse a ctagged codebase, start Vim on a tag: vim -t my_tag
 Invocation and startup	Emergency remote vimrc: $ vim -Nu <(curl http://me.github.io/dotfiles/.vimrc)
+Invocation and startup	Vim has many names: vim, ex, view, gvim, gex, rvim, evim, vimdiff, ... |ex|
 
 # GUI
 
@@ -220,6 +224,7 @@ Vim script	Always, without exception, use -# or -? in string comparison ops: |ex
 Vim script	Write maintainable code. Use :function :else :return, not :fu :el :retu.
 Vim script	Abbreviated commands really :r :no :fun. Use :read :noremap :function instead.
 Writing scripts	As a new author, seek guidance in existing plugins: :args $VIMRUNTIME/**/*.vim
+Writing scripts	The |function-list| is every script author's bread and butter.
 
 # Unclassified
 
