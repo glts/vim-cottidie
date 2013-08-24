@@ -27,6 +27,7 @@ Insert mode	When writing Vim scripts, CTRL-X CTRL-V cleverly completes Vim comma
 Insert mode	CTRL-X CTRL-F suggests/completes file name; repeat to continue completion.
 Insert mode	Use CTRL-X CTRL-L for line completion when typing out lots of similar lines.
 Insert mode	CTRL-W deletes words. Prefer deleting WORDs? :inoremap <C-W> <C-\><C-O>dB
+Insert mode	CTRL-G CTRL-K and CTRL-G CTRL-J move up and down in insert mode (if you must).
 Visual block mode	O is like o but it moves to the opposite end in the same line.
 Visual block mode	Set 'virtualedit' to "all" and move onto tab chars and past end of line.
 Visual block mode	Use of 'virtualedit' is often limited. Make a mapping to toggle on/off.
@@ -56,6 +57,9 @@ Editing	% is not just for navigating, it's also powerful with operators, e.g. y%
 Editing	The longer a repetitive edit takes, the more effort spend automating it.
 Editing	Type a function call as afunc()<Esc>iarg<Esc> for two meaningful undo states.
 Editing	Prefer operators to Visual mode: only operators are reliably repeatable with .
+Editing	Some templating languages use {{ code }}. Select the template with v2a{.
+Editing	In curly braces languages, [{ and ]} let you jump to start/end of scope.
+Editing	In Lisp-like languages, [( and ]) are very handy motions to start/end of form.
 Learning by doing	When you do something inefficiently, stop, u u u u, then redo the right way.
 Retabbing	From 2 spaces to 4: :set ts=2 noet | retab!, followed by :set ts=4 et | retab!
 Interruption	Use CTRL-C to abort runaway macros and Ex commands (when <Esc> is not enough).
