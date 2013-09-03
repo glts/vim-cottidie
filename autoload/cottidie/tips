@@ -188,7 +188,6 @@ Settings	For a more frugal GUI remove "Tm" from and add "c" to 'guioptions' flag
 Settings	Keep swap files in one location with 'directory'. "~/tmp,." is a good setting.
 Settings	Setting 'filetype' is like setting 'syntax' + FileType events and ftplugins.
 Settings	'list' reveals unprintable chars and is awarded the "most opaque option name".
-Settings	Swap inconveniently located |`| with |'|: :nnoremap ' `, :nnoremap ` '.
 Settings	There is an interactive options window at :options.
 Settings	Six ways to poke a boolean option: :set list nolist list! invlist list? list&
 Settings	Bare :set shows settings that differ from the default, :set all shows all.
