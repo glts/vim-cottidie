@@ -1,6 +1,6 @@
 " cottidie.vim - Your quotidian Vim tip in 78 characters
 " Author: glts <676c7473@gmail.com>
-" Date: 2013-07-13
+" Date: 2013-09-03
 
 if !exists('g:cottidie_no_default_tips')
   let g:cottidie_no_default_tips = 0
@@ -16,13 +16,13 @@ call extend(s:tips_files, g:cottidie_tips_files)
 function! s:OpenCottidieBuffer()
   let cbufnr = bufnr('^__Cottidie__$')
   if cbufnr == -1
-    silent keepalt botright vnew __Cottidie__
+    silent keepalt botright new __Cottidie__
     return s:InitCottidieBuffer()
   else
     if bufwinnr(cbufnr) != -1
       execute bufwinnr(cbufnr) . 'wincmd w'
     else
-      execute 'silent keepalt botright vsplit +buffer' . cbufnr
+      execute 'silent keepalt botright split +buffer' . cbufnr
     endif
     return 1
   endif
