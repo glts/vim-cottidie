@@ -61,6 +61,7 @@ Insert mode	CTRL-X CTRL-F suggests/completes file name; repeat to continue compl
 Insert mode	Use CTRL-X CTRL-L for line completion when typing out lots of similar lines.
 Insert mode	CTRL-W deletes words. Prefer deleting WORDs? :inoremap <C-W> <C-\><C-O>dB
 Insert mode	CTRL-G CTRL-K and CTRL-G CTRL-J move up and down in insert mode (if you must).
+Insert mode	Develop peripheral vision for adjacent lines and put CTRL-Y/CTRL-E to use.
 Visual block mode	O is like o but it moves to the opposite end in the same line.
 Visual block mode	Set 'virtualedit' to "all" and move onto tab chars and past end of line.
 Visual block mode	Use of 'virtualedit' is often limited. Make a mapping to toggle on/off.
