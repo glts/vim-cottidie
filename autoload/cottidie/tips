@@ -1,11 +1,44 @@
-# Cottidie default tips
+## Cottidie default tips
 
-# Modes and editing
+# General editing
+
+Editing	:set fo+=a enables real-time auto-reformatting of text paragraphs.
+Editing	An idiomatic way to do ASCII underlining in Vim is YpVr-.
+Editing	Next time you do d y p think about whether you might use :d :y :t :m instead.
+Editing	Swapping arguments in [a]bc == def: Perhaps "dewwvepbbhP" or "wdaw.bPa== "?
+Editing	Swapping function arguments in func([a]bc, def): dewvepbbp.
+Editing	Swap two var names: :%s/var1/temp/g, :%s/var2/<C-R>//g, :%s/temp/<C-R>//g
+Editing	Pasted text missing a space at beginning/end? Use `[ or `] to navigate there.
+Editing	Before copying/pasting text think about whether to include space before/after.
+Editing	dip on a blank line deletes it and all adjacent blank lines.
+Editing	d c y aren't the only operators. Do you know |gu| |gU| |g~| |g?|?
+Editing	Vim can justify text. But only after it's enabled: :runtime macros/justify.vim
+Editing	cip<Esc> collapses blank line under cursor and adjacent blank lines into one.
+Editing	viw on whitespace selects it and all adjacent whitespace.
+Editing	How would you yank the whole buffer into the clipboard? gg"+yG or :%y+<CR>?
+Editing	Indenting, outdenting, reindenting is easy with >8j >} <ap =i} == and friends.
+Editing	% is not just for navigating, it's also powerful with operators, e.g. y%.
+Editing	The longer a repetitive edit takes, the more effort spend automating it.
+Editing	Type a function call as afunc()<Esc>iarg<Esc> for two meaningful undo states.
+Editing	Prefer operators to Visual mode: only operators are reliably repeatable with .
+Editing	Some templating languages use {{ code }}. Select the template with v2a{.
+Editing	In curly-braces languages, [{ and ]} let you jump to start/end of scope.
+Editing	In Lisp-like languages, [( and ]) are very handy motions to start/end of form.
+Text objects	Quote text objects like ci" look to the right to find their target if needed.
+Text objects	yaw is context-sensitive: It can include following, preceding, or no space.
+Text objects	ca) yi} are easy to remember but the equivalent cab yiB are easier to type.
+Cursor movement	Vim has 1001 ways of moving the cursor. Sometimes even H M L can be useful.
+Learning by doing	When you do something inefficiently, stop, u u u u, then redo the right way.
+Retabbing	From 2 spaces to 4: :set ts=2 noet | retab!, followed by :set ts=4 et | retab!
+Interruption	Use CTRL-C to abort runaway macros and Ex commands (when <Esc> is not enough).
+
+# Modes
 
 Modes	Don't use CTRL-C as a substitute for <Esc> as it's insidiously different.
 Modes	There are a dozen distinct |vim-modes| and prompts. Do you know them all?
 Normal mode	gI is the dedicated command for 0i.
 Normal mode	:x and ZZ are like :wq, but they don't write when no changes were made.
+Normal mode	The command :wq is an immortal icon of Vim, but :x or ZZ are faster.
 Normal mode	gp gP are the same as p P but leave the cursor after the pasted text.
 Normal mode	gJ joins lines by removing just the newline, leaving whitespace untouched.
 Normal mode	If you don't use an external formatter, prefer gw over gq (preserves cursor).
@@ -35,43 +68,37 @@ Operator-pending mode	v V CTRL-V force char-wise, line-wise, block-wise operatio
 Operator-pending mode	y d c combine well with f t and /X<CR>, e.g. dt) or y/end<CR>.
 Ex mode	Trying this for a bit (Q) helps getting an idea of the motivation for Ex cmds.
 Ex mode	Formula for acting on paragraphs: :v/^$/.,//-1join or :v/^$/.,//-1sort
-Text objects	Quote text objects like ci" look to the right to find their target if needed.
-Text objects	yaw is context-sensitive: It can include following, preceding, or no space.
-Text objects	ca) yi} are easy to remember but the equivalent cab yiB are easier to type.
-Editing	:set fo+=a enables real-time auto-reformatting of text paragraphs.
-Editing	An idiomatic way to do ASCII underlining in Vim is VypVr-.
-Editing	Next time you do d y p think about whether you might use :d :y :t :m instead.
-Editing	Swapping arguments in [a]bc == def: Perhaps "dewwvepbbhP" or "wdaw.bPa== "?
-Editing	Swapping function arguments in func([a]bc, def): dewvepbbp.
-Editing	Swap two var names: :%s/var1/temp/g, :%s/var2/<C-R>//g, :%s/temp/<C-R>//g
-Editing	Pasted text missing a space at beginning/end? Use `[ or `] to navigate there.
-Editing	Before copying/pasting text think about whether to include space before/after.
-Editing	dip on a blank line deletes it and all adjacent blank lines.
-Editing	d c y aren't the only operators. Do you know |gu| |gU| |g~| |g?|?
-Editing	Vim can justify text. But only after it's enabled: :runtime macros/justify.vim
-Editing	cip<Esc> collapses blank line under cursor and adjacent blank lines into one.
-Editing	viw on whitespace selects it and all adjacent whitespace.
-Editing	How would you yank the whole buffer into the clipboard? gg"+yG or :%y+<CR>?
-Editing	Indenting, outdenting, reindenting is easy with >8j >} <ap =i} == and friends.
-Editing	% is not just for navigating, it's also powerful with operators, e.g. y%.
-Editing	The longer a repetitive edit takes, the more effort spend automating it.
-Editing	Type a function call as afunc()<Esc>iarg<Esc> for two meaningful undo states.
-Editing	Prefer operators to Visual mode: only operators are reliably repeatable with .
-Editing	Some templating languages use {{ code }}. Select the template with v2a{.
-Editing	In curly braces languages, [{ and ]} let you jump to start/end of scope.
-Editing	In Lisp-like languages, [( and ]) are very handy motions to start/end of form.
-Learning by doing	When you do something inefficiently, stop, u u u u, then redo the right way.
-Retabbing	From 2 spaces to 4: :set ts=2 noet | retab!, followed by :set ts=4 et | retab!
-Interruption	Use CTRL-C to abort runaway macros and Ex commands (when <Esc> is not enough).
 
-# Navigation, searching, jumps, changes
+# Undo, changes
 
-Navigation	Quicksearch: [I prints all lines containing the word under the cursor.
+Undo	Prevent undo from undoing too much with <C-G>u maps: :inoremap <CR> <CR><C-G>u
+Undo	Leave insert mode frequently so you can undo changes in more granular fashion.
+Change list	Drop a mark before travelling backwards in the change list with g; as safety.
+
+# Registers
+
+Registers	c and d automatically fill registers "1 to "9, whereas y fills register "0.
+Registers	"1p followed by u . u . u . toggles through old deletes. |redo-register|
+Registers	The easiest way to insert the current file name is pasting register "%.
+Registers	:set cpo+=> makes Vim insert a newline when appending text to a register.
+Registers	A clobbered register is an unnecessary pain: Consider mappings with "_.
+
+# Marks
+
+Marks	`` is sometimes more precise than CTRL-O/CTRL-I for jumping back and forth.
+Marks	After jumping to the last change with `. you can jump back again with ``.
+Marks	Having enclosed an area with two marks, jump to beginning/end with [` and ]`.
+Marks	`` and `. can be used in Visual/Operator-pending mode. CTRL-O and g; can't.
+
+# Searching
+
+Searching	Quicksearch: [I prints all lines containing the word under the cursor.
 Searching	:nohls is used often, it's best to map it to something simple: <BS> or <C-L>.
 Searching	How often does X occur in file? Do /X<CR> and then :%s///gn to find out.
 Searching	Use /<CR> and ?<CR> to change the direction of the last search.
-Searching	/pattern<CR> to search, v//e<CR> to Visual select the match under the cursor.
+Searching	/pattern<CR> to search, v//e<CR> to Visual-select the match under the cursor.
 Searching	On the / command-line, CTRL-R CTRL-W completes partial match under the cursor!
+Searching	Make n N always search forward/backward: :noremap n /<CR> and :noremap N ?<CR>
 Vim regular expressions	Speak Perl? Here's a phrasebook for a* a+ a? a*? a+?: a* a\+ a\= a\{-} a\{-1,}
 Vim regular expressions	Advanced Perl phrasebook (?:a) (?=a) (?!a) (?<=a): \%(a\) a\@= a\@! a\@<=
 Vim regular expressions	The Perlish /s flag is missing, but there's the golf club |\_.| for that.
@@ -84,13 +111,7 @@ Vim regular expressions	What is a word boundary? \< is \k\@<!\k\@=, and \> is \k
 Vim regular expressions	A search for "2^3" needs no escaping. ^ has no special meaning in mid-line.
 Vim regular expressions	/\$a<CR> and /$a<CR> match the same. $ needs escaping only when at the end.
 
-# Undo, changes
-
-Undo	Prevent undo from undoing too much with <C-G>u maps: :inoremap <CR> <CR><C-G>u
-Undo	Leave insert mode frequently so you can undo changes in more granular fashion.
-Change list	Drop a mark before travelling backwards in the change list with g; as safety.
-
-# Ex commands, command-line, substitution
+# Substitution
 
 Substitution	Substitute interactively with :%s///gc, interrupt with <Esc>, repeat with g&.
 Substitution	Remap & to :&&<CR>, then repeat the most recent substitution easily with &.
@@ -102,6 +123,9 @@ Substitution	:~& replaces different targets with same word: /X<CR> :~&<CR> /Y<CR
 Substitution	In the replacement, & and ~ are special: whole match and previous {string}.
 Substitution	Substitute X for the word under the cursor: Press * and then :%s//X/g<CR>
 Substitution	One way of substituting X for the word under the cursor: :%s/<C-R><C-W>/X/g
+
+# Command-line
+
 Command-line	CTRL-A forces word expansion similar to Bash's glob-expand-word command.
 Command-line	Remap CTRL-A to <Home> as a natural counterpart to the existing CTRL-E.
 Command-line	CTRL-R = lets you eval an expression, e.g. arithmetic expr, function call ...
@@ -112,6 +136,7 @@ Command-line	Set up %% to insert dirname of current file: :cabbr <expr> %% expan
 Command-line	:map lists defined mappings, filterable by beginning. For instance: :map [
 Command-line	:abbr lists defined abbreviations, filterable by beginning. Example: :abbr @
 Command-line	<Tab> toggles through completion candidates, CTRL-D shows them all at once.
+Command-line	In interactive use it's fine to use short forms of commands: :h :se :sp :ene
 Ex commands	Dropping marks and using :'a,'b can be an alternative to Visual selection.
 Ex commands	:g is also handy for normal commands: :g/target/norm $daW or :g/target/norm A,
 Ex addresses	Old Vi mandates that in place of :+5 and :-2 you may also use :+++++ and :--.
@@ -120,18 +145,10 @@ Ex ranges	, separator puts context at cursor position, ; at preceding line speci
 Ex ranges	No need to reselect Visual area for '<,'> range, the last one is remembered.
 Ex ranges	Giving a [count] before pressing : translates to ":.,.+([count]-1)".
 
-# Mappings, abbreviations
-
-Mappings	For Visual mode mappings :xmap is usually more appropriate than :vmap.
-Mappings	Treat "nore" maps as the default, use plain :map only with good reason. |:no|
-Mappings	Think recursive maps are special? Then you are ready for |map-self-destroy|.
-Abbreviations	Add <C-G>u to your abbreviations for easy unexpansion: :iab def def<C-G>u...
-
-# Windows, buffers, files, and navigation
+# Windows, buffers, file navigation
 
 Scrolling	zt, zz, zb scroll to put the cursor at the top, center, bottom of the screen.
 Scrolling	Prefer zt zz zb over z<CR> z. z- as they preserve the cursor position.
-Cursor movement	Vim has 1001 ways of moving the cursor. Sometimes even H M L can be useful.
 Windows	Need to edit the alternate file in a split? CTRL-W CTRL-^ does that.
 Windows	CTRL-W _ maximizes current window vertically, CTRL-W | horizontally.
 Windows	CTRL-W T moves the current window to a new tab page.
@@ -147,25 +164,15 @@ Files	:r can also open file paths starting with http: ftp: scp:, see |netrw-urls
 Files	Saving and opening essentials are :write :update :saveas :edit :file :find.
 Files	:find {file} becomes useful once you've ":set path+=**". Put it in your vimrc.
 Argument list	Having populated the |arglist| with files, act on them: :argdo %s/foo/bar/ge
+Argument list	Fill, then grep the arglist with |##|: :args *.sh<CR>, :vimgrep /trap/ ##<CR>.
 Tags	CTRL-W } or :pt to preview tag under cursor, CTRL-W z or :pc to close.
 Tags	Prefer g CTRL-] over CTRL-] as it lets you choose when there are >1 matches.
-
-# Registers, Marks
-
-Registers	c and d automatically fill registers "1 to "9, whereas y fills register "0.
-Registers	"1p followed by u . u . u . toggles through old deletes. |redo-register|
-Registers	The easiest way to insert the current file name is pasting register "%.
-Registers	:set cpo+=> makes Vim insert a newline when appending text to a register.
-Registers	A clobbered register is an unnecessary pain: Consider mappings with "_.
-Marks	`` is sometimes more precise than CTRL-O/CTRL-I for jumping back and forth.
-Marks	After jumping to the last change with `. you can jump back again with ``.
-Marks	Having enclosed an area with two marks, jump to beginning/end with [` and ]`.
-Marks	`` and `. can be used in Visual/Operator-pending mode. CTRL-O and g; can't.
 
 # Macros
 
 Macros	Replay macro q on every line of the Visual selection: :'<,'>normal! @q
 Macros	Idiom for adding incrementing numbers starting at cursor: qqyyp<C-A>q42@q
+Macros	Macros take time to learn. Start by applying them to little repetitive tasks.
 Recursive macros	Some people like to use them: the macro qq<C-A>j@qq increments line numbers.
 
 # Folding
@@ -181,7 +188,7 @@ Vimdiff	do (diff-obtain) and dp (diff-put) are the essential commands here.
 Vimdiff	To diff the current file with another do :vert botr diffsp <file2>.
 Vimdiff	[c ]c move to next diff. If lines are missing, moves after the missing part.
 
-# Configuration, setup, plugins
+# Settings and configuration
 
 Settings	Get rid of the intro screen at startup: :set shortmess+=I
 Settings	For a more frugal GUI remove "Tm" from and add "c" to 'guioptions' flags.
@@ -193,6 +200,11 @@ Settings	Six ways to poke a boolean option: :set list nolist list! invlist list?
 Settings	Bare :set shows settings that differ from the default, :set all shows all.
 Setup	The matchit plugin enhances your |%|. It's in the manual at |matchit-install|.
 Setup	:Man displays man pages in Vim, activate it with: :runtime! ftplugin/man.vim
+Mappings	For Visual mode mappings :xmap is usually more appropriate than :vmap.
+Mappings	Treat "nore" maps as the default, use plain :map only with good reason. |:no|
+Mappings	Think recursive maps are special? Then you are ready for |map-self-destroy|.
+Abbreviations	Add <C-G>u to your abbreviations for easy unexpansion: :iab def def<C-G>u...
+GUI Vim	Don't bother with the 'guifont' format, use a dialog instead: :set guifont=*
 
 # Invocation
 
@@ -203,10 +215,6 @@ Invocation and startup	Vim can be your |less|! This adds colour to your diffs: $
 Invocation and startup	If you frequently browse a ctagged codebase, start Vim on a tag: vim -t my_tag
 Invocation and startup	Emergency remote vimrc: $ vim -Nu <(curl http://me.github.io/dotfiles/.vimrc)
 Invocation and startup	Vim has many names: vim, ex, view, gvim, gex, rvim, evim, vimdiff, ... |ex|
-
-# GUI
-
-GUI Vim	Don't bother with the 'guifont' format, use a dialog instead: :set guifont=*
 
 # Help
 
@@ -233,15 +241,15 @@ Writing scripts	The |function-list| is every script author's bread and butter.
 
 Encodings	Unicode control freaks rely on ga and g8 for character information.
 Jargon	A Vimmer deletes, yanks, puts instead of cutting, copying, pasting.
-Tricks	The "sudo tee" trick: Write the file as the superuser: :!sudo tee % >/dev/null
-Tricks	Repurpose :[range]g to repeat an unrelated action N times: :1,78g/^/1s/$/=/
-Tricks	Ex mode as a poor man's quickfix list: Q, :g/TODO/vi<CR>, Q, Q, Q, :vi<CR>.
-Tricks	Swap strings ( never occurs): :g/^/s/foo//g | s/bar/foo/g | s//bar/g<CR>
-Tricks	Auto-scrolling through a recursive map with the gs command: :nmap j gj1gsj
+Clever tricks	The "sudo tee" trick: Write the file as the superuser: :!sudo tee % >/dev/null
+Clever tricks	Repurpose :[range]g to repeat an unrelated action N times: :1,78g/^/1s/$/=/
+Clever tricks	Ex mode as a poor man's quickfix list: Q, :g/TODO/vi<CR>, Q, Q, Q, :vi<CR>.
+Clever tricks	Swap strings ( never occurs): :g/^/s/foo//g | s/bar/foo/g | s//bar/g<CR>
+Clever tricks	Auto-scrolling through a recursive map with the gs command: :nmap j gj1gsj
 Miscellaneous	It's worth reading up on |hit-enter-prompt| and |more-prompt| sometime.
 Miscellaneous	Keep your right hand in the jkl; position even when using hjkl movement.
 Miscellaneous	Nothing to do? Implement the missing Visual mode counterparts to * and #!
 Trivia	Quiz time: remember what the control characters ^I ^M ^J ^[ ^H ^@ stand for?
 The Zen of Vim	Vim is a plain text editor, not a WYSIWYG editor. Set 'conceallevel' to 0.
 
-# vim:ft=help:tw=0:ts=32:cc=110:noet:nowrap:
+## vim:ft=help:tw=0:ts=32:cc=110:noet:nowrap:fde=getline(v\:lnum)=~'^#'?'>1'\:1:fdm=expr:
