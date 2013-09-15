@@ -141,7 +141,6 @@ Ex commands	Dropping marks and using :'a,'b can be an alternative to Visual sele
 Ex commands	:g is also handy for normal commands: :g/target/norm $daW or :g/target/norm A,
 Ex addresses	Old Vi mandates that in place of :+5 and :-2 you may also use :+++++ and :--.
 Ex ranges	If you delete the '<,'> range by mistake just type its short synonym: *
-Ex ranges	, separator puts context at cursor position, ; at preceding line specifier.
 Ex ranges	No need to reselect Visual area for '<,'> range, the last one is remembered.
 Ex ranges	Giving a [count] before pressing : translates to ":.,.+([count]-1)".
 
@@ -228,6 +227,7 @@ Help	CTRL-D is one of the most effective tools to navigate the help: :h gist<C-D
 Help	The user manual is a terrific read. Make a plan and read it. |usr_toc|
 Help	"Everything you always wanted to know is in the Vim help files." Mind |02.8|.
 Help	The |help-summary| is designed to help you help yourself.
+Help	Leaving 'keywordprg' empty makes K look up the word under the cursor in :help.
 
 # Vim script
 
