@@ -220,7 +220,7 @@ Invocation and startup	Vim has many names: vim, ex, view, gvim, gex, rvim, evim,
 Help	Tag search supports a short format; instead of :h i_CTRL-X_CTRL-S do :h i^x^s.
 Help	Tag search is case-insensitive (e.g. :h ctrl-e), but matching case wins.
 Help	:helpgrep is exceptional in that it expects a regexp without // delimiters.
-Help	Cry for help with :h!<CR>, Vim will be there for you.
+Help	Cry for help with :help!<CR>, Vim will be there for you.
 Help	There is a handy cross-referenced list with all Vim commands at :h index.
 Help	:h quickref has a thematically grouped Vim commands reference.
 Help	CTRL-D is one of the most effective tools to navigate the help: :h gist<C-D>
@@ -228,6 +228,7 @@ Help	The user manual is a terrific read. Make a plan and read it. |usr_toc|
 Help	"Everything you always wanted to know is in the Vim help files." Mind |02.8|.
 Help	The |help-summary| is designed to help you help yourself.
 Help	Leaving 'keywordprg' empty makes K look up the word under the cursor in :help.
+Help	:viusage for Normal mode command reference, :exusage for Ex command reference.
 
 # Vim script
 
