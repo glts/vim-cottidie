@@ -230,6 +230,7 @@ Help	"Everything you always wanted to know is in the Vim help files." Mind |02.8
 Help	The |help-summary| is designed to help you help yourself.
 Help	Leaving 'keywordprg' empty makes K look up the word under the cursor in :help.
 Help	:viusage for Normal mode command reference, :exusage for Ex command reference.
+Help	Vim has a few assorted tips of its own. Check them out at ":h tips".
 
 # Vim script
 
