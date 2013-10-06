@@ -51,6 +51,7 @@ Normal mode	The counterpart to ^ is g_: Move the cursor to the last non-blank in
 Normal mode	gg and G are opposites, but [count]gg and [count]G are the same.
 Normal mode	Some normal mode commands mirror Ex addressing: - + / ? ' :- :+ :/ :? :'
 Normal mode	Four command "prefixes" have their own section in the |index|: CTRL-W [ g z
+Normal mode	@: reexecutes the last Ex command. Example: :CottidieTip<CR>, @:, @:, @:, ...
 Insert mode	CTRL-A inserts the most recently inserted text.
 Insert mode	Use CTRL-A when doing repetitive typing: ivar<Esc>a1, <C-A>2, <C-A>3, ...
 Insert mode	When you realize you've made a typo, press CTRL-W and retype, it's faster.
@@ -153,7 +154,9 @@ Scrolling	Prefer zt zz zb over z<CR> z. z- as they preserve the cursor position.
 Windows	Need to edit the alternate file in a split? CTRL-W CTRL-^ does that.
 Windows	CTRL-W _ maximizes current window vertically, CTRL-W | horizontally.
 Windows	CTRL-W T moves the current window to a new tab page.
+Windows	When working on two locations in one buffer, :split the screen to see both.
 Windows and buffers	:q, :close, :bdel quit a window, close a window, close a buffer. Look it up!
+Files, buffers, windows	What is the difference between files, buffers, windows, tab pages? |window|
 Buffers	A mapping can be as good as any buffer manager: :nnoremap L :ls<CR>:b<Space>
 Buffers	By default you can't |abandon| a modified buffer. With 'hidden' set, you can.
 Files and buffers	CTRL-G prints the file name, more info available with 1 CTRL-G and 2 CTRL-G.
@@ -232,6 +235,7 @@ Help	The |help-summary| is designed to help you help yourself.
 Help	Leaving 'keywordprg' empty makes K look up the word under the cursor in :help.
 Help	:viusage for Normal mode command reference, :exusage for Ex command reference.
 Help	Vim has a few assorted tips of its own. Check them out at ":h tips".
+Help	|tags| 'option' CTRL-X <C-X> "x" [count] {motion}: learn Vim's |notation|.
 
 # Vim script
 
