@@ -3,7 +3,7 @@
 # General editing
 
 Editing	:set fo+=a enables real-time auto-reformatting of text paragraphs.
-Editing	An idiomatic way to do ASCII underlining in Vim is YpVr-.
+Editing	An idiomatic way to do ASCII underlining in Vim is yypVr-.
 Editing	Next time you do d y p think about whether you might use :d :y :t :m instead.
 Editing	Swapping arguments in [a]bc == def: Perhaps "dewwvepbbhP" or "wdaw.bPa== "?
 Editing	Swapping function arguments in func([a]bc, def): dewvepbbp.
