@@ -171,6 +171,8 @@ Argument list	Having populated the |arglist| with files, act on them: :argdo %s/
 Argument list	Fill, then grep the arglist with |##|: :args *.sh<CR>, :vimgrep /trap/ ##<CR>.
 Tags	CTRL-W } or :pt to preview tag under cursor, CTRL-W z or :pc to close.
 Tags	Prefer g CTRL-] over CTRL-] as it lets you choose when there are >1 matches.
+Quickfix list	To navigate all matches in the buffer: /X<CR> followed by :vimgrep /<C-R>// %
+
 
 # Macros
 
