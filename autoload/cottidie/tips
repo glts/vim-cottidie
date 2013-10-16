@@ -242,6 +242,7 @@ Help	Leaving 'keywordprg' empty makes K look up the word under the cursor in :he
 Help	:viusage for Normal mode command reference, :exusage for Ex command reference.
 Help	Vim has a few assorted tips of its own. Check them out at ":h tips".
 Help	|tags| 'option' CTRL-X <C-X> "x" [count] {motion}: learn Vim's |notation|.
+Help	Help tags for search topics start with a slash: :h /*, :h /\w,  :h /\%[], ...
 
 # Vim script
 
