@@ -24,6 +24,7 @@ Editing	Prefer operators to Visual mode: only operators are reliably repeatable 
 Editing	Some templating languages use {{ code }}. Select the template with v2a{.
 Editing	In curly-braces languages, [{ and ]} let you jump to start/end of scope.
 Editing	In Lisp-like languages, [( and ]) are very handy motions to start/end of form.
+Editing	Don't move around in insert mode. Afterwards the edit can't be repeated with .
 Editing text	Sort lines of data in reverse order and make them unique: vip:sort! u<CR>
 Text objects	Quote text objects like ci" look to the right to find their target if needed.
 Text objects	yaw is context-sensitive: It can include following, preceding, or no space.
@@ -159,7 +160,7 @@ Windows	Need to edit the alternate file in a split? CTRL-W CTRL-^ does that.
 Windows	CTRL-W _ maximizes current window vertically, CTRL-W | horizontally.
 Windows	CTRL-W T moves the current window to a new tab page.
 Windows	When working on two locations in one buffer, :split the screen to see both.
-Windows and buffers	:q, :close, :bdel quit a window, close a window, close a buffer. Look it up!
+Windows and buffers	:q :close :bdel, quit a window, close a window, close a buffer. Look it up!
 Files, buffers, windows	What is the difference between files, buffers, windows, tab pages? |window|
 Buffers	A mapping can be as good as any buffer manager: :nnoremap L :ls<CR>:b<Space>
 Buffers	By default you can't |abandon| a modified buffer. With 'hidden' set, you can.
@@ -171,12 +172,12 @@ Files	:browse oldfiles (:bro old) is Vim's "most recently used files" feature.
 Files	:r can also open file paths starting with http: ftp: scp:, see |netrw-urls|.
 Files	Saving and opening essentials are :write :update :saveas :edit :file :find.
 Files	:find {file} becomes useful once you've ":set path+=**". Put it in your vimrc.
+File formats	Convert like dos2unix and unix2dos: :set ff=unix|w<CR> or :set ff=dos|w<CR>.
 Argument list	Having populated the |arglist| with files, act on them: :argdo %s/foo/bar/ge
 Argument list	Fill, then grep the arglist with |##|: :args *.sh<CR>, :vimgrep /trap/ ##<CR>.
 Tags	CTRL-W } or :pt to preview tag under cursor, CTRL-W z or :pc to close.
 Tags	Prefer g CTRL-] over CTRL-] as it lets you choose when there are >1 matches.
 Quickfix list	To navigate all matches in the buffer: /X<CR> followed by :vimgrep /<C-R>// %
-
 
 # Macros
 
@@ -191,6 +192,7 @@ Folding	Create throwaway folds on the fly with zf, e.g. zf3} to fold three parag
 Folding	Not everybody likes folds. Toggle folding instantly with zi.
 Folding	zf to create a number of folds by hand, :folddoc {cmd} to act on folded lines.
 Folding	Use the 'foldopen' option to control whether } { / ? may open closed folds.
+Folding	Essential commands: zo zc zR zM, open fold, close fold, open all, close all.
 
 # Vimdiff
 
@@ -225,6 +227,7 @@ Invocation and startup	Vim can be your |less|! This adds colour to your diffs: $
 Invocation and startup	If you frequently browse a ctagged codebase, start Vim on a tag: vim -t my_tag
 Invocation and startup	Emergency remote vimrc: $ vim -Nu <(curl http://me.github.io/dotfiles/.vimrc)
 Invocation and startup	Vim has many names: vim, ex, view, gvim, gex, rvim, evim, vimdiff, ... |ex|
+Invocation and startup	Vim as a cheap dos2unix substitute: $ alias dos2unix="vim +'set ff=unix|wq'"
 
 # Help
 
@@ -243,6 +246,7 @@ Help	:viusage for Normal mode command reference, :exusage for Ex command referen
 Help	Vim has a few assorted tips of its own. Check them out at ":h tips".
 Help	|tags| 'option' CTRL-X <C-X> "x" [count] {motion}: learn Vim's |notation|.
 Help	Help tags for search topics start with a slash: :h /*, :h /\w,  :h /\%[], ...
+Help	Some prefer reading help full-screen instead of in a tiny window: :tab h grail
 
 # Vim script
 
