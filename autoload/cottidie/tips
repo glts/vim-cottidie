@@ -71,6 +71,7 @@ Insert mode	CTRL-R plus register is staple. But there's also CTRL-R CTRL-R/CTRL-
 Visual block mode	O is like o but it moves to the opposite end in the same line.
 Visual block mode	Set 'virtualedit' to "all" and move onto tab chars and past end of line.
 Visual block mode	Use of 'virtualedit' is often limited. Make a mapping to toggle on/off.
+Visual block shift	> and < work in Visual block mode, too: try <C-V>jj> and then . to repeat.
 Operator-pending mode	v V CTRL-V force char-wise, line-wise, block-wise operation. Try cv3j or dV}.
 Operator-pending mode	y d c combine well with f t and /X<CR>, e.g. dt) or y/end<CR>.
 Ex mode	Trying this for a bit (Q) helps getting an idea of the motivation for Ex cmds.
