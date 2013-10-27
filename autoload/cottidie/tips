@@ -91,6 +91,7 @@ Registers	The easiest way to insert the current file name is pasting register "%
 Registers	:set cpo+=> makes Vim insert a newline when appending text to a register.
 Registers	A clobbered register is an unnecessary pain: Consider mappings with "_.
 Registers	Pocket calculator: In insert mode, typing <C-R>=12*3.5/10<CR> inserts "4.2".
+Registers	The black hole register "_ can also be read from. Example: :g/^class /-1put_
 
 # Marks
 
