@@ -4,7 +4,6 @@
 
 Editing	:set fo+=a enables real-time auto-reformatting of text paragraphs.
 Editing	An idiomatic way to do ASCII underlining in Vim is yypVr-.
-Editing	Next time you do d y p think about whether you might use :d :y :t :m instead.
 Editing	Swapping arguments in [a]bc == def: Perhaps "dewwvepbbhP" or "wdaw.bPa== "?
 Editing	Swapping function arguments in func([a]bc, def): dewvepbbp.
 Editing	Swap two var names: :%s/var1/temp/g, :%s/var2/<C-R>//g, :%s/temp/<C-R>//g
@@ -33,6 +32,7 @@ Cursor movement	Vim has 1001 ways of moving the cursor. Sometimes even H M L can
 Learning by doing	When you do something inefficiently, stop, u u u u, then redo the right way.
 Retabbing	From 2 spaces to 4: :set ts=2 noet | retab!, followed by :set ts=4 et | retab!
 Interruption	Use CTRL-C to abort runaway macros and Ex commands (when <Esc> is not enough).
+Ex commands	Next time you do d y p think about whether you might use :d :y :t :m instead.
 
 # Modes
 
@@ -154,6 +154,7 @@ Ex addresses	Old Vi mandates that in place of :+5 and :-2 you may also use :++++
 Ex ranges	If you delete the '<,'> range by mistake just type its short synonym: *
 Ex ranges	No need to reselect Visual area for '<,'> range, the last one is remembered.
 Ex ranges	Giving a [count] before pressing : translates to ":.,.+([count]-1)".
+Ex ranges	Explicit marks as a persistent alternative to Visual mode: :'a,'bg/^=====/d
 
 # Windows, buffers, file navigation
 
