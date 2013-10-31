@@ -68,6 +68,7 @@ Insert mode	CTRL-W deletes words. Prefer deleting WORDS? :inoremap <C-W> <C-\><C
 Insert mode	CTRL-G CTRL-K and CTRL-G CTRL-J move up and down in insert mode (if you must).
 Insert mode	Develop peripheral vision for adjacent lines and put CTRL-Y/CTRL-E to use.
 Insert mode	CTRL-R plus register is staple. But there's also CTRL-R CTRL-R/CTRL-O/CTRL-P.
+Insert mode	Insert at the same column on many lines: ifoo<C-G><C-J>bar<C-G><C-J>baz<Esc>
 Visual block mode	O is like o but it moves to the opposite end in the same line.
 Visual block mode	Set 'virtualedit' to "all" and move onto tab chars and past end of line.
 Visual block mode	Use of 'virtualedit' is often limited. Make a mapping to toggle on/off.
@@ -268,8 +269,9 @@ Clever tricks	Ex mode as a poor man's quickfix list: Q, :g/TODO/vi<CR>, Q, Q, Q,
 Clever tricks	Swap strings ( never occurs): :g/^/s/foo//g | s/bar/foo/g | s//bar/g<CR>
 Clever tricks	Auto-scrolling through a recursive map with the gs command: :nmap j gj1gsj
 Miscellaneous	It's worth reading up on |hit-enter-prompt| and |more-prompt| sometime.
-Miscellaneous	Keep your right hand in the jkl; position even when using hjkl movement.
 Miscellaneous	Nothing to do? Implement the missing Visual mode counterparts to * and #!
+Practicalities	Keep your right hand in the jkl; position even when using hjkl movement.
+Practicalities	Press the Control key *once* and hold it down in combos like CTRL-W CTRL-L.
 Trivia	Quiz time: remember what the control characters ^I ^M ^J ^[ ^H ^@ stand for?
 The Zen of Vim	Vim is a plain text editor, not a WYSIWYG editor. Set 'conceallevel' to 0.
 
