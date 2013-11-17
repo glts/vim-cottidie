@@ -25,6 +25,7 @@ Editing	In curly-braces languages, [{ and ]} let you jump to start/end of scope.
 Editing	In Lisp-like languages, [( and ]) are very handy motions to start/end of form.
 Editing	Don't move around in insert mode. Afterwards the edit can't be repeated with .
 Editing text	Sort lines of data in reverse order and make them unique: vip:sort! u<CR>
+Indenting	How to indent: >> or >3j or >ip to indent, . to indent more, u to pull back.
 Text objects	Quote text objects like ci" look to the right to find their target if needed.
 Text objects	yaw is context-sensitive: It can include following, preceding, or no space.
 Text objects	ca) yi} are easy to remember but the equivalent cab yiB are easier to type.
