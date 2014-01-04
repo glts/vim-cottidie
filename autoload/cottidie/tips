@@ -258,6 +258,8 @@ Help	Some prefer reading help full-screen instead of in a tiny window: :tab h gr
 Vim script	Always, without exception, use -# or -? in string comparison ops: |expr-==#|.
 Vim script	Write maintainable code. Use :function :else :return, not :fu :el :retu.
 Vim script	Abbreviated commands really :r :no :fun. Use :read :noremap :function instead.
+Vim script	Vim does not stop execution on error! Do use [abort] on your |:function|s.
+Vim script	You can be explicit about your variables' l:local l:scope. Try it out. |l:var|
 Writing scripts	As a new author, seek guidance in existing plugins: :args $VIMRUNTIME/**/*.vim
 Writing scripts	The |function-list| is every script author's bread and butter.
 
