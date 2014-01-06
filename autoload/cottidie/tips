@@ -25,6 +25,9 @@ Editing	In curly-braces languages, [{ and ]} let you jump to start/end of scope.
 Editing	In Lisp-like languages, [( and ]) are very handy motions to start/end of form.
 Editing	Don't move around in insert mode. Afterwards the edit can't be repeated with .
 Editing text	Sort lines of data in reverse order and make them unique: vip:sort! u<CR>
+Editing text	Type upper case lines (headings) in lower case, then upcase with gUU or VU.
+Editing text	g CTRL-G prints a column, line, word, char, and byte count for the buffer.
+Editing text	g CTRL-G works in Visual mode too, it shows stats for the selection only.
 Indenting	How to indent: >> or >3j or >ip to indent, . to indent more, u to pull back.
 Text objects	Quote text objects like ci" look to the right to find their target if needed.
 Text objects	yaw is context-sensitive: It can include following, preceding, or no space.
@@ -48,7 +51,6 @@ Normal mode	If you don't use an external formatter, prefer gw over gq (preserves
 Normal mode	:! is also available as !, which will deduce the [range] from your motion.
 Normal mode	gi takes you back to where you last inserted text |`^| and starts insert mode.
 Normal mode	ga shows decimal and hex value of a character, g8 shows UTF-8 bytes.
-Normal mode	g CTRL-G prints a column, line, word, char, and byte count for the buffer.
 Normal mode	* and # (and g*/g#) are vital navigation commands. Try to absorb them asap.
 Normal mode	The counterpart to ^ is g_: Move the cursor to the last non-blank in line.
 Normal mode	gg and G are opposites, but [count]gg and [count]G are the same.
@@ -65,6 +67,7 @@ Insert mode	Consider defining a mapping for CTRL-K (kill-line) as counterpart to
 Insert mode	When writing Vim scripts, CTRL-X CTRL-V cleverly completes Vim commands.
 Insert mode	CTRL-X CTRL-F suggests/completes file name; repeat to continue completion.
 Insert mode	Use CTRL-X CTRL-L for line completion when typing out lots of similar lines.
+Insert mode	Start typing a line, then use CTRL-X CTRL-L to complete with similar lines.
 Insert mode	CTRL-W deletes words. Prefer deleting WORDS? :inoremap <C-W> <C-\><C-O>dB
 Insert mode	CTRL-G CTRL-K and CTRL-G CTRL-J move up and down in insert mode (if you must).
 Insert mode	Develop peripheral vision for adjacent lines and put CTRL-Y/CTRL-E to use.
@@ -111,6 +114,7 @@ Searching	Use /<CR> and ?<CR> to change the direction of the last search.
 Searching	/pattern<CR> to search, v//e<CR> to Visual-select the match under the cursor.
 Searching	On the / command-line, CTRL-R CTRL-W completes partial match under the cursor!
 Searching	Make n N always search forward/backward: :noremap n /<CR> and :noremap N ?<CR>
+Searching	'smartcase' is similar to 'ignorecase' but tries to guess your intent.
 Vim regular expressions	Speak Perl? Here's a phrasebook for a* a+ a? a*? a+?: a* a\+ a\= a\{-} a\{-1,}
 Vim regular expressions	Advanced Perl phrasebook (?:a) (?=a) (?!a) (?<=a): \%(a\) a\@= a\@! a\@<=
 Vim regular expressions	The Perlish /s flag is missing, but there's the golf club |\_.| for that.
@@ -148,7 +152,9 @@ Command-line	Set up %% to insert dirname of current file: :cabbr <expr> %% expan
 Command-line	:map lists defined mappings, filterable by beginning. For instance: :map [
 Command-line	:abbr lists defined abbreviations, filterable by beginning. Example: :abbr @
 Command-line	<Tab> toggles through completion candidates, CTRL-D shows them all at once.
+Command-line	Use command-line completion liberally |20.3|: :e /us<Tab>loc<Tab>li<Tab>...
 Command-line	In interactive use it's fine to use short forms of commands: :h :se :sp :ene
+Command-line	Know |filename-modifiers| by heart, they're useful: :!javac % && java %:r
 Ex commands	Dropping marks and using :'a,'b can be an alternative to Visual selection.
 Ex commands	:g is also handy for normal commands: :g/target/norm $daW or :g/target/norm A,
 Ex addresses	Old Vi mandates that in place of :+5 and :-2 you may also use :+++++ and :--.
@@ -189,6 +195,7 @@ Quickfix list	To navigate all matches in the buffer: /X<CR> followed by :vimgrep
 Macros	Replay macro q on every line of the Visual selection: :'<,'>normal! @q
 Macros	Idiom for adding incrementing numbers starting at cursor: qqyyp<C-A>q42@q
 Macros	Macros take time to learn. Start by applying them to little repetitive tasks.
+Macros	You can interrupt the recording of a macro (qq...q) and resume later: qQ...
 Recursive macros	Some people like to use them: the macro qq<C-A>j@qq increments line numbers.
 
 # Folding
@@ -215,11 +222,13 @@ Settings	'list' reveals unprintable chars and is awarded the "most opaque option
 Settings	There is an interactive options window at :options.
 Settings	Six ways to poke a boolean option: :set list nolist list! invlist list? list&
 Settings	Bare :set shows settings that differ from the default, :set all shows all.
+Settings	For 'report', 1 or 0 is a saner default setting than 2. Put it in your vimrc.
 Setup	The matchit plugin enhances your |%|. It's in the manual at |matchit-install|.
 Setup	:Man displays man pages in Vim, activate it with: :runtime! ftplugin/man.vim
 Mappings	For Visual mode mappings :xmap is usually more appropriate than :vmap.
 Mappings	Treat "nore" maps as the default, use plain :map only with good reason. |:no|
 Mappings	Think recursive maps are special? Then you are ready for |map-self-destroy|.
+Mappings	. doesn't do anything in Visual mode. Suggestion: :xnoremap . :norm! .<CR>
 Abbreviations	Add <C-G>u to your abbreviations for easy unexpansion: :iab def def<C-G>u...
 GUI Vim	Don't bother with the 'guifont' format, use a dialog instead: :set guifont=*
 
