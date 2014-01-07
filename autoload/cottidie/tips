@@ -196,6 +196,7 @@ Macros	Replay macro q on every line of the Visual selection: :'<,'>normal! @q
 Macros	Idiom for adding incrementing numbers starting at cursor: qqyyp<C-A>q42@q
 Macros	Macros take time to learn. Start by applying them to little repetitive tasks.
 Macros	You can interrupt the recording of a macro (qq...q) and resume later: qQ...
+Macros	Display the keystrokes of the macro recorded in register q: :display q
 Recursive macros	Some people like to use them: the macro qq<C-A>j@qq increments line numbers.
 
 # Folding
@@ -223,6 +224,8 @@ Settings	There is an interactive options window at :options.
 Settings	Six ways to poke a boolean option: :set list nolist list! invlist list? list&
 Settings	Bare :set shows settings that differ from the default, :set all shows all.
 Settings	For 'report', 1 or 0 is a saner default setting than 2. Put it in your vimrc.
+Settings	|map-backtick| recommends making ` simpler to reach: :nnoremap ' `
+Settings	Swap inconveniently located |`| with |'|: :nnoremap ' `, :nnoremap ` '.
 Setup	The matchit plugin enhances your |%|. It's in the manual at |matchit-install|.
 Setup	:Man displays man pages in Vim, activate it with: :runtime! ftplugin/man.vim
 Mappings	For Visual mode mappings :xmap is usually more appropriate than :vmap.
