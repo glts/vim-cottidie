@@ -156,13 +156,13 @@ Command-line	<Tab> toggles through completion candidates, CTRL-D shows them all 
 Command-line	Use command-line completion liberally |20.3|: :e /us<Tab>loc<Tab>li<Tab>...
 Command-line	In interactive use it's fine to use short forms of commands: :h :se :sp :ene
 Command-line	Know |filename-modifiers| by heart, they're useful: :!javac % && java %:r
-Ex commands	Dropping marks and using :'a,'b can be an alternative to Visual selection.
 Ex commands	:g is also handy for normal commands: :g/target/norm $daW or :g/target/norm A,
 Ex commands	:global can do more than just one command: :g/chapter/s/./\u&/|copy 0|right 62
 Ex addresses	Old Vi mandates that in place of :+5 and :-2 you may also use :+++++ and :--.
 Ex ranges	If you delete the '<,'> range by mistake just type its short synonym: *
 Ex ranges	No need to reselect Visual area for '<,'> range, the last one is remembered.
 Ex ranges	Giving a [count] before pressing : translates to ":.,.+([count]-1)".
+Ex ranges	Dropping marks and using :'a,'b can be an alternative to Visual selection.
 Ex ranges	Explicit marks as a persistent alternative to Visual mode: :'a,'bg/^=====/d
 
 # Windows, buffers, file navigation
