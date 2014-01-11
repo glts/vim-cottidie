@@ -79,8 +79,6 @@ Visual block mode	Use of 'virtualedit' is often limited. Make a mapping to toggl
 Visual block shift	> and < work in Visual block mode, too: try <C-V>jj> and then . to repeat.
 Operator-pending mode	v V CTRL-V force char-wise, line-wise, block-wise operation. Try cv3j or dV}.
 Operator-pending mode	y d c combine well with f t and /X<CR>, e.g. dt) or y/end<CR>.
-Ex mode	Trying this for a bit (Q) helps getting an idea of the motivation for Ex cmds.
-Ex mode	Formula for acting on paragraphs: :v/^$/.,//-1join or :v/^$/.,//-1sort
 
 # Undo, changes
 
@@ -112,7 +110,7 @@ Searching	:nohls is used often, it's best to map it to something simple: <BS> or
 Searching	How often does X occur in file? Do /X<CR> and then :%s///gn to find out.
 Searching	Use /<CR> and ?<CR> to change the direction of the last search.
 Searching	/pattern<CR> to search, v//e<CR> to Visual-select the match under the cursor.
-Searching	On the / command-line, CTRL-R CTRL-W completes partial match under the cursor!
+Searching	When searching, CTRL-R CTRL-W completes with partial match under the cursor!
 Searching	Make n N always search forward/backward: :noremap n /<CR> and :noremap N ?<CR>
 Searching	'smartcase' is similar to 'ignorecase' but tries to guess your intent.
 Vim regular expressions	Speak Perl? Here's a phrasebook for a* a+ a? a*? a+?: a* a\+ a\= a\{-} a\{-1,}
@@ -266,6 +264,7 @@ Help	Vim has a few assorted tips of its own. Check them out at ":h tips".
 Help	|tags| 'option' CTRL-X <C-X> "x" [count] {motion}: learn Vim's |notation|.
 Help	Help tags for search topics start with a slash: :h /*, :h /\w,  :h /\%[], ...
 Help	Some prefer reading help full-screen instead of in a tiny window: :tab h grail
+Help	The |local-additions| section in the help has a list with all local plugins.
 
 # Vim script
 
