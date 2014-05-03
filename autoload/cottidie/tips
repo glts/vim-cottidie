@@ -59,6 +59,7 @@ Normal mode	Four command "prefixes" have their own section in the |index|: CTRL-
 Normal mode	@: reexecutes the last Ex command. Example: :CottidieTip<CR>, @:, @:, @:, ...
 Motions	Tell your words from your WORDS and put this learning into practice. |word|
 Motions	The Shift key is like an accelerator: w b e go slow, but W B E go fast!
+Motions	Find your own idioms. 0w is easier to type than ^ and often just as effective.
 Insert mode	CTRL-A inserts the most recently inserted text.
 Insert mode	Use CTRL-A when doing repetitive typing: ivar<Esc>a1, <C-A>2, <C-A>3, ...
 Insert mode	When you realize you've made a typo, press CTRL-W and retype, it's faster.
@@ -113,6 +114,7 @@ Searching	/pattern<CR> to search, v//e<CR> to Visual-select the match under the 
 Searching	When searching, CTRL-R CTRL-W completes with partial match under the cursor!
 Searching	Make n N always search forward/backward: :noremap n /<CR> and :noremap N ?<CR>
 Searching	'smartcase' is similar to 'ignorecase' but tries to guess your intent.
+Searching	URLs and file paths: avoid escaping by searching backwards first: ?/usr/bin/nl
 Vim regular expressions	Speak Perl? Here's a phrasebook for a* a+ a? a*? a+?: a* a\+ a\= a\{-} a\{-1,}
 Vim regular expressions	Advanced Perl phrasebook (?:a) (?=a) (?!a) (?<=a): \%(a\) a\@= a\@! a\@<=
 Vim regular expressions	The Perlish /s flag is missing, but there's the golf club |\_.| for that.
@@ -197,6 +199,7 @@ Macros	Idiom for adding incrementing numbers starting at cursor: qqyyp<C-A>q42@q
 Macros	Macros take time to learn. Start by applying them to little repetitive tasks.
 Macros	You can interrupt the recording of a macro (qq...q) and resume later: qQ...
 Macros	Display the keystrokes of the macro recorded in register q: :display q
+Macros	Edit the macro in register q by pasting it ("qp), editing it, yanking it back.
 Recursive macros	Some people like to use them: the macro qq<C-A>j@qq increments line numbers.
 
 # Folding
@@ -241,6 +244,7 @@ Invocation and startup	Use --remote[-tab] options to open a new file with the ru
 Invocation and startup	Use GUI version of Vim as default shell editor: export EDITOR='gvim -f'.
 Invocation and startup	Option -o opens files in splits, -O in vertical splits, -p in tabs.
 Invocation and startup	Vim can be your |less|! This adds colour to your diffs: $ svn diff | less.sh
+Invocation and startup	Pipe directly into Vim, no need for temp files: $ hg diff | vim -
 Invocation and startup	If you frequently browse a ctagged codebase, start Vim on a tag: vim -t my_tag
 Invocation and startup	Emergency remote vimrc: $ vim -Nu <(curl http://me.github.io/dotfiles/.vimrc)
 Invocation and startup	Vim has many names: vim, ex, view, gvim, gex, rvim, evim, vimdiff, ... |ex|
@@ -264,6 +268,7 @@ Help	Vim has a few assorted tips of its own. Check them out at ":h tips".
 Help	|tags| 'option' CTRL-X <C-X> "x" [count] {motion}: learn Vim's |notation|.
 Help	Help tags for search topics start with a slash: :h /*, :h /\w,  :h /\%[], ...
 Help	Some prefer reading help full-screen instead of in a tiny window: :tab h grail
+Help	Make the help key show full-screen help: :nnoremap <F1> :<C-U>tab help<CR>
 Help	The |local-additions| section in the help has a list with all local plugins.
 
 # Vim script
