@@ -238,6 +238,7 @@ Mappings	Treat "nore" maps as the default, use plain :map only with good reason.
 Mappings	Think recursive maps are special? Then you are ready for |map-self-destroy|.
 Mappings	. doesn't do anything in Visual mode. Suggestion: :xnoremap . :norm! .<CR>
 Abbreviations	Add <C-G>u to your abbreviations for easy unexpansion: :iab def def<C-G>u...
+Abbreviations	|type-mistakes| Abbreviations as a simple auto-correct: :noreabbrev teh the
 GUI Vim	Don't bother with the 'guifont' format, use a dialog instead: :set guifont=*
 
 # Invocation
