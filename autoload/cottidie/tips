@@ -127,6 +127,7 @@ Vim regular expressions	\q matches "q". But as an unused escape it may change in
 Vim regular expressions	What is a word boundary? \< is \k\@<!\k\@=, and \> is \k\@<=\k\@!.
 Vim regular expressions	A search for "2^3" needs no escaping. ^ has no special meaning in mid-line.
 Vim regular expressions	/\$a<CR> and /$a<CR> match the same. $ needs escaping only when at the end.
+Vim regular expressions	\d\> can match a digit at the end of a line, \d\D can't: \> is |/zero-width|.
 
 # Substitution
 
@@ -143,6 +144,7 @@ Substitution	One way of substituting X for the word under the cursor: :%s/<C-R><
 
 # Command-line
 
+Command-line	Your shell's CTRL-A (beginning-of-line) is CTRL-B on Vim's command-line.
 Command-line	CTRL-A forces word expansion similar to Bash's glob-expand-word command.
 Command-line	Remap CTRL-A to <Home> as a natural counterpart to the existing CTRL-E.
 Command-line	CTRL-R = lets you eval an expression, e.g. arithmetic expr, function call ...
